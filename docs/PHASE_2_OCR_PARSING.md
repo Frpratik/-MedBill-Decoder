@@ -1,6 +1,6 @@
 # Phase 2 checkpoint: OCR and line-item parsing
 
-The user approved Phase 1. Phase 2 implements actual Tesseract/OpenCV processing and conservative line-item extraction. Statistical comparisons, explanations, API and UI remain for later phases.
+This document records the completed Phase 2 checkpoint, subsequently approved by the user. Phase 2 implements actual Tesseract/OpenCV processing and conservative line-item extraction. Phase 3 results are documented separately.
 
 ## Implementation
 

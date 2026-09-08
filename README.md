@@ -1,6 +1,6 @@
 # MedBill Decoder
 
-Phases 1–2: a local CMS reference lookup plus real Tesseract/OpenCV OCR and line-item parsing. The approved wording is **amount above Medicare benchmark**. Statistical comparisons, explanations, API and UI remain for later phases.
+Phases 1–3: a local CMS reference lookup, real Tesseract/OpenCV OCR and line-item parsing, and statistical Medicare benchmark comparisons. The approved wording is **amount above Medicare benchmark**. Explanations, API and UI remain for later phases.
 
 ## Setup
 
@@ -50,7 +50,16 @@ Only synthetic/public sample data is permitted. Every PDF is rasterized before l
 
 Three synthetic fixtures and their generator are included. `samples/README.md` cites the bill-format references. `docs/PHASE_2_OCR_PARSING.md` records actual extraction results and failures: 13 candidate rows, eight complete and five requiring review, including two correct fields withheld by the conservative confidence policy. This is a small development regression, not a general OCR accuracy estimate. Handwriting, complex/wrapped layouts and severe camera distortion remain unvalidated.
 
-## Outputs
+## Benchmark comparison
+
+```powershell
+.\.venv\Scripts\python.exe -m medbill.evaluate_comparison
+.\.venv\Scripts\python.exe -m medbill.compare docs/phase2/01_clean.json --synthetic --carrier 01112 --locality 05 --setting nonfacility --category nonQP
+```
+
+Only complete, accepted OCR rows with usable active CMS references are compared. The engine normalizes the line charge by quantity and flags it only when the unit charge exceeds both the matched local rate and the nearest-rank 95th percentile across matching Medicare localities. Cohorts with fewer than 20 eligible observations or no geographic variation receive no statistical flag. Uncertain and unpriced rows remain excluded. Reported amounts are partial benchmark differences, not confirmed overcharges or recoverable savings. See `docs/PHASE_3_BENCHMARK_COMPARISON.md` for formulas, actual numbers and limitations.
+
+## Reference outputs
 
 - `data/processed/reference.sqlite`: indexed public reference snapshot, opened read-only at runtime.
 - `data/processed/reference.audit.json`: ingestion counts and data gaps.

@@ -1,0 +1,16 @@
+01_clean {"candidate_rows": 4, "compared_rows": 3, "excluded_rows": 1, "flagged_rows": 3, "excluded_reasons": {"no_matching_rate": 1}, "amount_above_medicare_benchmark_usd": "384.44", "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.", "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."}
+  99213 qty=1 charge/unit=$250.00 local/unit=$117.58 p95=$111.96 n=109 flag=True above=$132.42
+  71046 qty=1 charge/unit=$180.00 local/unit=$43.76 p95=$41.22 n=109 flag=True above=$136.24
+  93000 qty=1 charge/unit=$135.00 local/unit=$19.22 p95=$18.26 n=109 flag=True above=$115.78
+  80053: no_matching_rate
+02_skewed {"candidate_rows": 4, "compared_rows": 2, "excluded_rows": 2, "flagged_rows": 2, "excluded_reasons": {"ocr_review_required": 2}, "amount_above_medicare_benchmark_usd": "223.96", "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.", "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."}
+  97110 qty=2 charge/unit=$90.00 local/unit=$35.91 p95=$34.20 n=109 flag=True above=$108.18
+  71046: ocr_review_required
+  93000 qty=1 charge/unit=$135.00 local/unit=$19.22 p95=$18.26 n=109 flag=True above=$115.78
+  None: ocr_review_required
+03_degraded {"candidate_rows": 5, "compared_rows": 1, "excluded_rows": 4, "flagged_rows": 1, "excluded_reasons": {"no_matching_rate": 1, "ocr_review_required": 3}, "amount_above_medicare_benchmark_usd": "153.60", "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.", "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."}
+  99214 qty=1 charge/unit=$320.00 local/unit=$166.40 p95=$158.59 n=109 flag=True above=$153.60
+  J1885: no_matching_rate
+  None: ocr_review_required
+  80053: ocr_review_required
+  99213: ocr_review_required
