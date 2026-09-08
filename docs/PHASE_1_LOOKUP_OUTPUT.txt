@@ -1,0 +1,25 @@
+case | code | description | benchmark USD | availability
+Office visit, nonfacility | 99213 | Office o/p est low 20 min | 117.58 | published_benchmark
+Office visit, facility | 99213 | Office o/p est low 20 min | 64.37 | published_benchmark
+Office visit, QP | 99213 | Office o/p est low 20 min | 118.17 | published_benchmark
+Chest X-ray, global | 71046 | X-ray exam chest 2 views | 43.76 | published_benchmark
+Chest X-ray, professional component | 71046 | X-ray exam chest 2 views | 11.59 | published_benchmark
+ECG | 93000 | Electrocardiogram complete | 19.22 | published_benchmark
+July revision example | 46505 | Chemodenervation anal musc | 432.49 | published_benchmark
+Unsupported lab reference | 80053 | Comprehen metabolic panel | None | no_matching_rate
+Unknown code | ZZZZZ | None | None | unknown_code
+Unsupported service date | 99213 | None | None | unsupported_date
+Rarely/never performed setting | 71046 | X-ray exam chest 2 views | None | setting_rarely_or_never_performed
+Terminated HCPCS | J0135 | Adalimumab injection | None | terminated_code
+Conflicting CMS status | A4100 | Nosht skin sub fda clrd nos | None | conflicting_status_metadata
+{
+  "sources": 9,
+  "code_descriptions": 19356,
+  "rvu_policy": 31265,
+  "hcpcs_descriptions": 8725,
+  "hcpcs_modifiers": 384,
+  "ingestion_issues": 10,
+  "build_metadata": 5,
+  "payment_rates": 2075578,
+  "payment_revisions": 11336
+}

@@ -1,0 +1,21 @@
+test_duplicate_source_keys_fail (test_reference.ParsingTests.test_duplicate_source_keys_fail) ... ok
+test_invalid_money_is_not_imputed (test_reference.ParsingTests.test_invalid_money_is_not_imputed) ... ok
+test_money_preserves_cents (test_reference.ParsingTests.test_money_preserves_cents) ... ok
+test_conflicting_cms_status_is_withheld (test_reference.SourceIntegrationTests.test_conflicting_cms_status_is_withheld) ... ok
+test_dates_never_silently_fallback (test_reference.SourceIntegrationTests.test_dates_never_silently_fallback) ... ok
+test_every_last_revision_matches_current_row (test_reference.SourceIntegrationTests.test_every_last_revision_matches_current_row) ... ok
+test_hcpcs_corrections_already_in_main_workbook (test_reference.SourceIntegrationTests.test_hcpcs_corrections_already_in_main_workbook) ... ok
+test_invalid_context_rejected (test_reference.SourceIntegrationTests.test_invalid_context_rejected) ... ok
+test_missing_locality_and_modifier_never_fallback (test_reference.SourceIntegrationTests.test_missing_locality_and_modifier_never_fallback) ... ok
+test_na_setting_does_not_use_positive_source_amount (test_reference.SourceIntegrationTests.test_na_setting_does_not_use_positive_source_amount) ... ok
+test_qp_is_not_nonqp (test_reference.SourceIntegrationTests.test_qp_is_not_nonqp) ... ok
+test_runtime_database_is_read_only (test_reference.SourceIntegrationTests.test_runtime_database_is_read_only) ... ok
+test_setting_changes_reference (test_reference.SourceIntegrationTests.test_setting_changes_reference) ... ok
+test_terminated_hcpcs_not_used (test_reference.SourceIntegrationTests.test_terminated_hcpcs_not_used) ... ok
+test_unknown_code_never_gets_price (test_reference.SourceIntegrationTests.test_unknown_code_never_gets_price) ... ok
+test_verified_raw_office_visit (test_reference.SourceIntegrationTests.test_verified_raw_office_visit) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 3.243s
+
+OK

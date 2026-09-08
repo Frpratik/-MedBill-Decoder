@@ -1,0 +1,110 @@
+annual_nonQP: 1,035,391 data rows; 4 copyright trailers excluded
+annual_QP: 1,035,391 data rows; 4 copyright trailers excluded
+april_nonQP: 4,033 data rows; 4 copyright trailers excluded
+april_QP: 4,033 data rows; 4 copyright trailers excluded
+july_nonQP: 1,635 data rows; 4 copyright trailers excluded
+july_QP: 1,635 data rows; 4 copyright trailers excluded
+rvu_nonQP: 19,356 rows
+rvu_QP: 11,909 rows
+hcpcs: 9,109 rows (8,725 procedures, 384 modifiers)
+{
+  "input_rows": {
+    "annual_nonQP": 1035391,
+    "annual_QP": 1035391,
+    "april_nonQP": 4033,
+    "april_QP": 4033,
+    "july_nonQP": 1635,
+    "july_QP": 1635
+  },
+  "table_counts": {
+    "payment_rates": 2075578,
+    "payment_revisions": 11336,
+    "code_descriptions": 19356,
+    "rvu_policy": 31265,
+    "hcpcs_descriptions": 8725,
+    "hcpcs_modifiers": 384,
+    "sources": 9
+  },
+  "missing_description_keys": [],
+  "missing_policy_rate_rows": 0,
+  "status_conflict_rate_rows": 218,
+  "distinct_payment_codes": 7857,
+  "carrier_locality_pairs": 109,
+  "current_rows_by_source": {
+    "annual_QP": 1032121,
+    "annual_nonQP": 1032121,
+    "april_QP": 4033,
+    "april_nonQP": 4033,
+    "july_QP": 1635,
+    "july_nonQP": 1635
+  },
+  "status_counts": {
+    "A": 2051162,
+    "R": 22672,
+    "T": 1744
+  },
+  "issues": [
+    {
+      "kind": "excluded_copyright_trailers",
+      "source_id": "annual_nonQP",
+      "count": 4,
+      "detail": "TRL- CPT CODES AND DESCRIPTIONS ONLY ARE COPYRIGHT 2026 AMERICAN MEDICAL ASSOCIATION. \nTRL- ALL RIGHTS RESERVED. APPLICABLE FARS/DFARS APPLY.\nTRL- THE FOLLOWING STATEMENT APPLIES TO ALL DENTAL CODES (HCPCS START WITH LETTER D): \nTRL- COPYRIGHT 2026 AMERICAN DENTAL ASSOCIATION. ALL RIGHTS RESERVED."
+    },
+    {
+      "kind": "excluded_copyright_trailers",
+      "source_id": "annual_QP",
+      "count": 4,
+      "detail": "TRL- CPT CODES AND DESCRIPTIONS ONLY ARE COPYRIGHT 2026 AMERICAN MEDICAL ASSOCIATION. \nTRL- ALL RIGHTS RESERVED. APPLICABLE FARS/DFARS APPLY.\nTRL- THE FOLLOWING STATEMENT APPLIES TO ALL DENTAL CODES (HCPCS START WITH LETTER D): \nTRL- COPYRIGHT 2026 AMERICAN DENTAL ASSOCIATION. ALL RIGHTS RESERVED."
+    },
+    {
+      "kind": "excluded_copyright_trailers",
+      "source_id": "april_nonQP",
+      "count": 4,
+      "detail": "TRL- CPT CODES AND DESCRIPTIONS ONLY ARE COPYRIGHT 2026 AMERICAN MEDICAL ASSOCIATION. \nTRL- ALL RIGHTS RESERVED. APPLICABLE FARS/DFARS APPLY.\nTRL- THE FOLLOWING STATEMENT APPLIES TO ALL DENTAL CODES (HCPCS START WITH LETTER D): \nTRL- COPYRIGHT 2026 AMERICAN DENTAL ASSOCIATION. ALL RIGHTS RESERVED."
+    },
+    {
+      "kind": "excluded_copyright_trailers",
+      "source_id": "april_QP",
+      "count": 4,
+      "detail": "TRL- CPT CODES AND DESCRIPTIONS ONLY ARE COPYRIGHT 2026 AMERICAN MEDICAL ASSOCIATION. \nTRL- ALL RIGHTS RESERVED. APPLICABLE FARS/DFARS APPLY.\nTRL- THE FOLLOWING STATEMENT APPLIES TO ALL DENTAL CODES (HCPCS START WITH LETTER D): \nTRL- COPYRIGHT 2026 AMERICAN DENTAL ASSOCIATION. ALL RIGHTS RESERVED."
+    },
+    {
+      "kind": "excluded_copyright_trailers",
+      "source_id": "july_nonQP",
+      "count": 4,
+      "detail": "TRL- CPT CODES AND DESCRIPTIONS ONLY ARE COPYRIGHT 2026 AMERICAN MEDICAL ASSOCIATION. \nTRL- ALL RIGHTS RESERVED. APPLICABLE FARS/DFARS APPLY.\nTRL- THE FOLLOWING STATEMENT APPLIES TO ALL DENTAL CODES (HCPCS START WITH LETTER D): \nTRL- COPYRIGHT 2026 AMERICAN DENTAL ASSOCIATION. ALL RIGHTS RESERVED."
+    },
+    {
+      "kind": "excluded_copyright_trailers",
+      "source_id": "july_QP",
+      "count": 4,
+      "detail": "TRL- CPT CODES AND DESCRIPTIONS ONLY ARE COPYRIGHT 2026 AMERICAN MEDICAL ASSOCIATION. \nTRL- ALL RIGHTS RESERVED. APPLICABLE FARS/DFARS APPLY.\nTRL- THE FOLLOWING STATEMENT APPLIES TO ALL DENTAL CODES (HCPCS START WITH LETTER D): \nTRL- COPYRIGHT 2026 AMERICAN DENTAL ASSOCIATION. ALL RIGHTS RESERVED."
+    },
+    {
+      "kind": "hcpcs_correction_pricing_conflicts",
+      "source_id": "hcpcs",
+      "count": 1,
+      "detail": "{\"checked_rows\": 8, \"pricing_conflicts\": [{\"code\": \"G0577\", \"workbook_price_indicator\": \"13\", \"corrections_price_indicator\": \"11\"}]}"
+    },
+    {
+      "kind": "missing_descriptions",
+      "source_id": "all",
+      "count": 0,
+      "detail": "[]"
+    },
+    {
+      "kind": "missing_policy_rows",
+      "source_id": "all",
+      "count": 0,
+      "detail": "Withhold benchmark when missing"
+    },
+    {
+      "kind": "status_conflicts",
+      "source_id": "all",
+      "count": 218,
+      "detail": "Withhold benchmark on conflicting metadata"
+    }
+  ],
+  "integrity_check": "ok",
+  "foreign_key_violations": []
+}
