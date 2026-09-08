@@ -1,0 +1,47 @@
+{
+  "input": "docs/phase3/02_skewed.json",
+  "summary": {
+    "total_rows": 4,
+    "counts": {
+      "template": 2,
+      "review_required": 2
+    },
+    "percent_of_all_rows": {
+      "template": 50.0,
+      "review_required": 50.0,
+      "unknown_code": 0.0
+    }
+  },
+  "items": [
+    {
+      "code": "97110",
+      "method": "template",
+      "explanation": "Therapeutic exercises.",
+      "official_description": "Therapeutic exercises",
+      "description_source_id": "rvu_nonQP",
+      "question": "Why does this unit charge exceed both the local Medicare rate and the geographic 95th percentile?",
+      "benchmark_explanation": "The charge per unit is $90.00; the matched Medicare rate is $35.91. The positive line difference is $108.18. This is not proof of an overcharge or savings."
+    },
+    {
+      "code": "71046",
+      "method": "review_required",
+      "explanation": "This line needs a clearer image or a corrected reading before it can be explained.",
+      "question": "Can you provide a clear itemized copy showing the code, units and charge?"
+    },
+    {
+      "code": "93000",
+      "method": "template",
+      "explanation": "An electrocardiogram (ECG), a recording of electrical activity in the heart.",
+      "official_description": "Electrocardiogram complete",
+      "description_source_id": "rvu_nonQP",
+      "question": "Why does this unit charge exceed both the local Medicare rate and the geographic 95th percentile?",
+      "benchmark_explanation": "The charge per unit is $135.00; the matched Medicare rate is $19.22. The positive line difference is $115.78. This is not proof of an overcharge or savings."
+    },
+    {
+      "code": null,
+      "method": "review_required",
+      "explanation": "This line needs a clearer image or a corrected reading before it can be explained.",
+      "question": "Can you provide a clear itemized copy showing the code, units and charge?"
+    }
+  ]
+}

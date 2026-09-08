@@ -1,6 +1,6 @@
 # MedBill Decoder
 
-Phases 1–3: a local CMS reference lookup, real Tesseract/OpenCV OCR and line-item parsing, and statistical Medicare benchmark comparisons. The approved wording is **amount above Medicare benchmark**. Explanations, API and UI remain for later phases.
+Phases 1–4: a local CMS reference lookup, real Tesseract/OpenCV OCR and line-item parsing, statistical Medicare benchmark comparisons, and local explanations. The approved wording is **amount above Medicare benchmark**. API and UI remain for later phases. No third-party API or LLM integration is used or required.
 
 ## Setup
 
@@ -59,7 +59,16 @@ Three synthetic fixtures and their generator are included. `samples/README.md` c
 
 Only complete, accepted OCR rows with usable active CMS references are compared. The engine normalizes the line charge by quantity and flags it only when the unit charge exceeds both the matched local rate and the nearest-rank 95th percentile across matching Medicare localities. Cohorts with fewer than 20 eligible observations or no geographic variation receive no statistical flag. Uncertain and unpriced rows remain excluded. Reported amounts are partial benchmark differences, not confirmed overcharges or recoverable savings. See `docs/PHASE_3_BENCHMARK_COMPARISON.md` for formulas, actual numbers and limitations.
 
-## Reference outputs
+## Local explanations
+
+```powershell
+.\.venv\Scripts\python.exe -m medbill.evaluate_explanations
+.\.venv\Scripts\python.exe -m medbill.explain docs/phase3/01_clean.json --synthetic
+```
+
+Seven code-specific paraphrases and a general CMS-description template explain known codes. Unknown codes receive a clarification question; uncertain OCR stays withheld. Prices and flags are copied from the comparison engine, never generated. All eight accepted sample rows use templates; five of the 13 total rows require OCR review. The requested Claude fallback was removed at the user's direction: the runtime stays local and needs no API key. See `docs/PHASE_4_EXPLANATIONS.md` for actual output and limits.
+
+## Reference artifacts
 
 - `data/processed/reference.sqlite`: indexed public reference snapshot, opened read-only at runtime.
 - `data/processed/reference.audit.json`: ingestion counts and data gaps.

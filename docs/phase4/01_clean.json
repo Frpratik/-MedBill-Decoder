@@ -1,0 +1,52 @@
+{
+  "input": "docs/phase3/01_clean.json",
+  "summary": {
+    "total_rows": 4,
+    "counts": {
+      "template": 4
+    },
+    "percent_of_all_rows": {
+      "template": 100.0,
+      "review_required": 0.0,
+      "unknown_code": 0.0
+    }
+  },
+  "items": [
+    {
+      "code": "99213",
+      "method": "template",
+      "explanation": "An office or outpatient visit with an established patient.",
+      "official_description": "Office o/p est low 20 min",
+      "description_source_id": "rvu_nonQP",
+      "question": "Why does this unit charge exceed both the local Medicare rate and the geographic 95th percentile?",
+      "benchmark_explanation": "The charge per unit is $250.00; the matched Medicare rate is $117.58. The positive line difference is $132.42. This is not proof of an overcharge or savings."
+    },
+    {
+      "code": "71046",
+      "method": "template",
+      "explanation": "A chest X-ray with two views.",
+      "official_description": "X-ray exam chest 2 views",
+      "description_source_id": "rvu_nonQP",
+      "question": "Why does this unit charge exceed both the local Medicare rate and the geographic 95th percentile?",
+      "benchmark_explanation": "The charge per unit is $180.00; the matched Medicare rate is $43.76. The positive line difference is $136.24. This is not proof of an overcharge or savings."
+    },
+    {
+      "code": "93000",
+      "method": "template",
+      "explanation": "An electrocardiogram (ECG), a recording of electrical activity in the heart.",
+      "official_description": "Electrocardiogram complete",
+      "description_source_id": "rvu_nonQP",
+      "question": "Why does this unit charge exceed both the local Medicare rate and the geographic 95th percentile?",
+      "benchmark_explanation": "The charge per unit is $135.00; the matched Medicare rate is $19.22. The positive line difference is $115.78. This is not proof of an overcharge or savings."
+    },
+    {
+      "code": "80053",
+      "method": "template",
+      "explanation": "A comprehensive metabolic panel, a group of blood tests.",
+      "official_description": "Comprehen metabolic panel",
+      "description_source_id": "rvu_nonQP",
+      "question": "Can you explain what this service and its billed units include?",
+      "benchmark_explanation": "No usable price comparison is available for this line; no difference is estimated."
+    }
+  ]
+}

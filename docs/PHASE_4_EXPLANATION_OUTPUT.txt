@@ -1,0 +1,17 @@
+01_clean {"total_rows": 4, "counts": {"template": 4}, "percent_of_all_rows": {"template": 100.0, "review_required": 0.0, "unknown_code": 0.0}}
+  99213: template: An office or outpatient visit with an established patient.
+  71046: template: A chest X-ray with two views.
+  93000: template: An electrocardiogram (ECG), a recording of electrical activity in the heart.
+  80053: template: A comprehensive metabolic panel, a group of blood tests.
+02_skewed {"total_rows": 4, "counts": {"template": 2, "review_required": 2}, "percent_of_all_rows": {"template": 50.0, "review_required": 50.0, "unknown_code": 0.0}}
+  97110: template: Therapeutic exercises.
+  71046: review_required: This line needs a clearer image or a corrected reading before it can be explained.
+  93000: template: An electrocardiogram (ECG), a recording of electrical activity in the heart.
+  None: review_required: This line needs a clearer image or a corrected reading before it can be explained.
+03_degraded {"total_rows": 5, "counts": {"template": 2, "review_required": 3}, "percent_of_all_rows": {"template": 40.0, "review_required": 60.0, "unknown_code": 0.0}}
+  99214: template: An office or outpatient visit with an established patient.
+  J1885: template: An injection of ketorolac tromethamine; the code describes each 15 mg billing unit.
+  None: review_required: This line needs a clearer image or a corrected reading before it can be explained.
+  80053: review_required: This line needs a clearer image or a corrected reading before it can be explained.
+  99213: review_required: This line needs a clearer image or a corrected reading before it can be explained.
+TOTAL {"template": 8, "review_required": 5}

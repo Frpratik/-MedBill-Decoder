@@ -1,0 +1,53 @@
+{
+  "input": "docs/phase3/03_degraded.json",
+  "summary": {
+    "total_rows": 5,
+    "counts": {
+      "template": 2,
+      "review_required": 3
+    },
+    "percent_of_all_rows": {
+      "template": 40.0,
+      "review_required": 60.0,
+      "unknown_code": 0.0
+    }
+  },
+  "items": [
+    {
+      "code": "99214",
+      "method": "template",
+      "explanation": "An office or outpatient visit with an established patient.",
+      "official_description": "Office o/p est mod 30 min",
+      "description_source_id": "rvu_nonQP",
+      "question": "Why does this unit charge exceed both the local Medicare rate and the geographic 95th percentile?",
+      "benchmark_explanation": "The charge per unit is $320.00; the matched Medicare rate is $166.40. The positive line difference is $153.60. This is not proof of an overcharge or savings."
+    },
+    {
+      "code": "J1885",
+      "method": "template",
+      "explanation": "An injection of ketorolac tromethamine; the code describes each 15 mg billing unit.",
+      "official_description": "Injection, ketorolac tromethamine, per 15 mg",
+      "description_source_id": "hcpcs",
+      "question": "Can you explain what this service and its billed units include?",
+      "benchmark_explanation": "No usable price comparison is available for this line; no difference is estimated."
+    },
+    {
+      "code": null,
+      "method": "review_required",
+      "explanation": "This line needs a clearer image or a corrected reading before it can be explained.",
+      "question": "Can you provide a clear itemized copy showing the code, units and charge?"
+    },
+    {
+      "code": "80053",
+      "method": "review_required",
+      "explanation": "This line needs a clearer image or a corrected reading before it can be explained.",
+      "question": "Can you provide a clear itemized copy showing the code, units and charge?"
+    },
+    {
+      "code": "99213",
+      "method": "review_required",
+      "explanation": "This line needs a clearer image or a corrected reading before it can be explained.",
+      "question": "Can you provide a clear itemized copy showing the code, units and charge?"
+    }
+  ]
+}
