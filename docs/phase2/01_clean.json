@@ -1,0 +1,1146 @@
+{
+  "items": [
+    {
+      "page": 1,
+      "line_index": 7,
+      "service_date": "2026-07-15",
+      "code": "99213",
+      "modifier": "",
+      "description": "Office visit - established patient",
+      "quantity": "1",
+      "charged_cents": 25000,
+      "charged_usd": "250.00",
+      "ocr_confidence": 95.95,
+      "field_confidence": {
+        "code": 96.52,
+        "description": 93.1,
+        "quantity": 96.93,
+        "charge": 96.89
+      },
+      "raw_text": "07/15/2026 99213 Office visit - established patient 1 $250.00",
+      "raw_columns": {
+        "code": "99213",
+        "description": "Office visit - established patient",
+        "quantity": "1",
+        "charge": "$250.00"
+      },
+      "issues": [],
+      "status": "parsed"
+    },
+    {
+      "page": 1,
+      "line_index": 8,
+      "service_date": "2026-07-15",
+      "code": "71046",
+      "modifier": "",
+      "description": "Chest X-ray - two views",
+      "quantity": "1",
+      "charged_cents": 18000,
+      "charged_usd": "180.00",
+      "ocr_confidence": 94.1,
+      "field_confidence": {
+        "code": 96.79,
+        "description": 88.65,
+        "quantity": 87.13,
+        "charge": 96.08
+      },
+      "raw_text": "07/15/2026 71046 Chest X-ray - two views 1 $180.00",
+      "raw_columns": {
+        "code": "71046",
+        "description": "Chest X-ray - two views",
+        "quantity": "1",
+        "charge": "$180.00"
+      },
+      "issues": [],
+      "status": "parsed"
+    },
+    {
+      "page": 1,
+      "line_index": 9,
+      "service_date": "2026-07-15",
+      "code": "93000",
+      "modifier": "",
+      "description": "Electrocardiogram complete",
+      "quantity": "1",
+      "charged_cents": 13500,
+      "charged_usd": "135.00",
+      "ocr_confidence": 95.59,
+      "field_confidence": {
+        "code": 96.66,
+        "description": 91.49,
+        "quantity": 96.93,
+        "charge": 96.27
+      },
+      "raw_text": "07/15/2026 93000 Electrocardiogram complete 1 $135.00",
+      "raw_columns": {
+        "code": "93000",
+        "description": "Electrocardiogram complete",
+        "quantity": "1",
+        "charge": "$135.00"
+      },
+      "issues": [],
+      "status": "parsed"
+    },
+    {
+      "page": 1,
+      "line_index": 10,
+      "service_date": "2026-07-15",
+      "code": "80053",
+      "modifier": "",
+      "description": "Comprehensive metabolic panel",
+      "quantity": "1",
+      "charged_cents": 9500,
+      "charged_usd": "95.00",
+      "ocr_confidence": 96.45,
+      "field_confidence": {
+        "code": 96.76,
+        "description": 95.97,
+        "quantity": 96.93,
+        "charge": 96.52
+      },
+      "raw_text": "07/15/2026 80053 Comprehensive metabolic panel 1 $95.00",
+      "raw_columns": {
+        "code": "80053",
+        "description": "Comprehensive metabolic panel",
+        "quantity": "1",
+        "charge": "$95.00"
+      },
+      "issues": [],
+      "status": "parsed"
+    }
+  ],
+  "review_rows": [],
+  "ignored_lines": [
+    {
+      "page": 1,
+      "text": "SYNTHETIC OUTPATIENT CLINIC",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "SYNTHETIC TEST BILL - NOT FOR PAYMENT",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "All identities and charges are fabricated for software testing.",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "ITEMIZED STATEMENT",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "Patient: TEST PERSON 01 Account: SAMPLE-01",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "Statement date: 08/15/2026 Currency: USD",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "Date Code Description Qty Charge",
+      "reason": "table_header"
+    },
+    {
+      "page": 1,
+      "text": "Total charges: $660.00",
+      "reason": "summary_not_line_item"
+    },
+    {
+      "page": 1,
+      "text": "Insurance payments: $0.00",
+      "reason": "summary_not_line_item"
+    },
+    {
+      "page": 1,
+      "text": "Patient balance: $660.00",
+      "reason": "summary_not_line_item"
+    },
+    {
+      "page": 1,
+      "text": "TEST FIXTURE ONLY. Do not use these amounts as reference prices.",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "Contact: no real provider. Payment instructions intentionally omitted.",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "Page 1 of 1",
+      "reason": "not_recognized_as_service_row"
+    }
+  ],
+  "summary": {
+    "candidate_rows": 4,
+    "parsed_rows": 4,
+    "review_rows": 0
+  },
+  "warnings": [],
+  "pages": [
+    {
+      "page": 1,
+      "original_shape": [
+        3301,
+        2550
+      ],
+      "processed_shape": [
+        3301,
+        2550
+      ],
+      "deskew_correction_degrees": 0.0,
+      "laplacian_variance": 421.7,
+      "method": "median denoise; projection deskew +/-5 degrees; adaptive Gaussian threshold; rule removal",
+      "text": "SYNTHETIC OUTPATIENT CLINIC\nSYNTHETIC TEST BILL - NOT FOR PAYMENT\nAll identities and charges are fabricated for software testing.\nITEMIZED STATEMENT\nPatient: TEST PERSON 01 Account: SAMPLE-01\nStatement date: 08/15/2026 Currency: USD\nDate Code Description Qty Charge\n07/15/2026 99213 Office visit - established patient 1 $250.00\n07/15/2026 71046 Chest X-ray - two views 1 $180.00\n07/15/2026 93000 Electrocardiogram complete 1 $135.00\n07/15/2026 80053 Comprehensive metabolic panel 1 $95.00\nTotal charges: $660.00\nInsurance payments: $0.00\nPatient balance: $660.00\nTEST FIXTURE ONLY. Do not use these amounts as reference prices.\nContact: no real provider. Payment instructions intentionally omitted.\nPage 1 of 1",
+      "lines": [
+        {
+          "page": 1,
+          "text": "SYNTHETIC OUTPATIENT CLINIC",
+          "words": [
+            {
+              "left": 186,
+              "top": 197,
+              "width": 372,
+              "height": 50,
+              "text": "SYNTHETIC",
+              "confidence": 95.970413
+            },
+            {
+              "left": 583,
+              "top": 197,
+              "width": 421,
+              "height": 50,
+              "text": "OUTPATIENT",
+              "confidence": 95.401161
+            },
+            {
+              "left": 1027,
+              "top": 197,
+              "width": 216,
+              "height": 50,
+              "text": "CLINIC",
+              "confidence": 96.037743
+            }
+          ],
+          "top": 197,
+          "confidence": 95.8
+        },
+        {
+          "page": 1,
+          "text": "SYNTHETIC TEST BILL - NOT FOR PAYMENT",
+          "words": [
+            {
+              "left": 185,
+              "top": 320,
+              "width": 255,
+              "height": 35,
+              "text": "SYNTHETIC",
+              "confidence": 96.290916
+            },
+            {
+              "left": 456,
+              "top": 320,
+              "width": 116,
+              "height": 35,
+              "text": "TEST",
+              "confidence": 96.166336
+            },
+            {
+              "left": 589,
+              "top": 321,
+              "width": 97,
+              "height": 33,
+              "text": "BILL",
+              "confidence": 92.603897
+            },
+            {
+              "left": 709,
+              "top": 339,
+              "width": 6,
+              "height": 7,
+              "text": "-",
+              "confidence": 92.454956
+            },
+            {
+              "left": 731,
+              "top": 320,
+              "width": 93,
+              "height": 35,
+              "text": "NOT",
+              "confidence": 95.145111
+            },
+            {
+              "left": 841,
+              "top": 320,
+              "width": 93,
+              "height": 35,
+              "text": "FOR",
+              "confidence": 95.145111
+            },
+            {
+              "left": 950,
+              "top": 321,
+              "width": 221,
+              "height": 33,
+              "text": "PAYMENT",
+              "confidence": 96.701645
+            }
+          ],
+          "top": 320,
+          "confidence": 94.93
+        },
+        {
+          "page": 1,
+          "text": "All identities and charges are fabricated for software testing.",
+          "words": [
+            {
+              "left": 183,
+              "top": 399,
+              "width": 44,
+              "height": 30,
+              "text": "All",
+              "confidence": 93.087662
+            },
+            {
+              "left": 243,
+              "top": 399,
+              "width": 161,
+              "height": 30,
+              "text": "identities",
+              "confidence": 93.087662
+            },
+            {
+              "left": 418,
+              "top": 399,
+              "width": 66,
+              "height": 30,
+              "text": "and",
+              "confidence": 96.912445
+            },
+            {
+              "left": 499,
+              "top": 399,
+              "width": 146,
+              "height": 39,
+              "text": "charges",
+              "confidence": 96.173813
+            },
+            {
+              "left": 659,
+              "top": 407,
+              "width": 58,
+              "height": 22,
+              "text": "are",
+              "confidence": 96.036095
+            },
+            {
+              "left": 730,
+              "top": 398,
+              "width": 180,
+              "height": 31,
+              "text": "fabricated",
+              "confidence": 96.036095
+            },
+            {
+              "left": 924,
+              "top": 398,
+              "width": 49,
+              "height": 31,
+              "text": "for",
+              "confidence": 96.533836
+            },
+            {
+              "left": 986,
+              "top": 398,
+              "width": 154,
+              "height": 31,
+              "text": "software",
+              "confidence": 96.594826
+            },
+            {
+              "left": 1154,
+              "top": 399,
+              "width": 131,
+              "height": 39,
+              "text": "testing.",
+              "confidence": 95.974884
+            }
+          ],
+          "top": 398,
+          "confidence": 95.6
+        },
+        {
+          "page": 1,
+          "text": "ITEMIZED STATEMENT",
+          "words": [
+            {
+              "left": 179,
+              "top": 595,
+              "width": 246,
+              "height": 39,
+              "text": "ITEMIZED",
+              "confidence": 96.346901
+            },
+            {
+              "left": 445,
+              "top": 594,
+              "width": 328,
+              "height": 40,
+              "text": "STATEMENT",
+              "confidence": 95.180077
+            }
+          ],
+          "top": 594,
+          "confidence": 95.76
+        },
+        {
+          "page": 1,
+          "text": "Patient: TEST PERSON 01 Account: SAMPLE-01",
+          "words": [
+            {
+              "left": 178,
+              "top": 704,
+              "width": 135,
+              "height": 30,
+              "text": "Patient:",
+              "confidence": 96.039429
+            },
+            {
+              "left": 328,
+              "top": 703,
+              "width": 106,
+              "height": 31,
+              "text": "TEST",
+              "confidence": 96.335716
+            },
+            {
+              "left": 448,
+              "top": 703,
+              "width": 171,
+              "height": 32,
+              "text": "PERSON",
+              "confidence": 95.592293
+            },
+            {
+              "left": 635,
+              "top": 704,
+              "width": 37,
+              "height": 31,
+              "text": "01",
+              "confidence": 94.398705
+            },
+            {
+              "left": 1458,
+              "top": 704,
+              "width": 159,
+              "height": 30,
+              "text": "Account:",
+              "confidence": 93.20562
+            },
+            {
+              "left": 1634,
+              "top": 703,
+              "width": 220,
+              "height": 32,
+              "text": "SAMPLE-01",
+              "confidence": 90.167572
+            }
+          ],
+          "top": 703,
+          "confidence": 94.29
+        },
+        {
+          "page": 1,
+          "text": "Statement date: 08/15/2026 Currency: USD",
+          "words": [
+            {
+              "left": 177,
+              "top": 778,
+              "width": 188,
+              "height": 31,
+              "text": "Statement",
+              "confidence": 96.202225
+            },
+            {
+              "left": 377,
+              "top": 779,
+              "width": 89,
+              "height": 30,
+              "text": "date:",
+              "confidence": 96.011482
+            },
+            {
+              "left": 482,
+              "top": 778,
+              "width": 206,
+              "height": 32,
+              "text": "08/15/2026",
+              "confidence": 96.249489
+            },
+            {
+              "left": 1460,
+              "top": 778,
+              "width": 176,
+              "height": 40,
+              "text": "Currency:",
+              "confidence": 95.946976
+            },
+            {
+              "left": 1653,
+              "top": 778,
+              "width": 83,
+              "height": 32,
+              "text": "USD",
+              "confidence": 96.759209
+            }
+          ],
+          "top": 778,
+          "confidence": 96.23
+        },
+        {
+          "page": 1,
+          "text": "Date Code Description Qty Charge",
+          "words": [
+            {
+              "left": 177,
+              "top": 913,
+              "width": 78,
+              "height": 46,
+              "text": "Date",
+              "confidence": 96.521187
+            },
+            {
+              "left": 464,
+              "top": 918,
+              "width": 91,
+              "height": 29,
+              "text": "Code",
+              "confidence": 96.634041
+            },
+            {
+              "left": 769,
+              "top": 913,
+              "width": 202,
+              "height": 46,
+              "text": "Description",
+              "confidence": 96.595673
+            },
+            {
+              "left": 1897,
+              "top": 914,
+              "width": 60,
+              "height": 47,
+              "text": "Qty",
+              "confidence": 95.757492
+            },
+            {
+              "left": 2131,
+              "top": 918,
+              "width": 126,
+              "height": 36,
+              "text": "Charge",
+              "confidence": 96.540092
+            }
+          ],
+          "top": 913,
+          "confidence": 96.41
+        },
+        {
+          "page": 1,
+          "text": "07/15/2026 99213 Office visit - established patient 1 $250.00",
+          "words": [
+            {
+              "left": 176,
+              "top": 1043,
+              "width": 185,
+              "height": 29,
+              "text": "07/15/2026",
+              "confidence": 96.036385
+            },
+            {
+              "left": 464,
+              "top": 1044,
+              "width": 101,
+              "height": 28,
+              "text": "99213",
+              "confidence": 96.515594
+            },
+            {
+              "left": 768,
+              "top": 1043,
+              "width": 95,
+              "height": 29,
+              "text": "Office",
+              "confidence": 97.005196
+            },
+            {
+              "left": 876,
+              "top": 1044,
+              "width": 63,
+              "height": 27,
+              "text": "visit",
+              "confidence": 93.304253
+            },
+            {
+              "left": 951,
+              "top": 1059,
+              "width": 11,
+              "height": 5,
+              "text": "-",
+              "confidence": 93.101692
+            },
+            {
+              "left": 974,
+              "top": 1044,
+              "width": 186,
+              "height": 27,
+              "text": "established",
+              "confidence": 96.839493
+            },
+            {
+              "left": 1175,
+              "top": 1044,
+              "width": 110,
+              "height": 35,
+              "text": "patient",
+              "confidence": 96.968376
+            },
+            {
+              "left": 1899,
+              "top": 1044,
+              "width": 11,
+              "height": 27,
+              "text": "1",
+              "confidence": 96.926102
+            },
+            {
+              "left": 2130,
+              "top": 1042,
+              "width": 133,
+              "height": 33,
+              "text": "$250.00",
+              "confidence": 96.88549
+            }
+          ],
+          "top": 1042,
+          "confidence": 95.95
+        },
+        {
+          "page": 1,
+          "text": "07/15/2026 71046 Chest X-ray - two views 1 $180.00",
+          "words": [
+            {
+              "left": 176,
+              "top": 1218,
+              "width": 185,
+              "height": 29,
+              "text": "07/15/2026",
+              "confidence": 96.036385
+            },
+            {
+              "left": 464,
+              "top": 1219,
+              "width": 101,
+              "height": 28,
+              "text": "71046",
+              "confidence": 96.787086
+            },
+            {
+              "left": 768,
+              "top": 1218,
+              "width": 96,
+              "height": 29,
+              "text": "Chest",
+              "confidence": 96.799011
+            },
+            {
+              "left": 876,
+              "top": 1219,
+              "width": 88,
+              "height": 35,
+              "text": "X-ray",
+              "confidence": 93.284752
+            },
+            {
+              "left": 976,
+              "top": 1234,
+              "width": 11,
+              "height": 5,
+              "text": "-",
+              "confidence": 88.64669
+            },
+            {
+              "left": 998,
+              "top": 1220,
+              "width": 57,
+              "height": 26,
+              "text": "two",
+              "confidence": 95.860931
+            },
+            {
+              "left": 1067,
+              "top": 1219,
+              "width": 92,
+              "height": 27,
+              "text": "views",
+              "confidence": 96.290535
+            },
+            {
+              "left": 1899,
+              "top": 1219,
+              "width": 11,
+              "height": 27,
+              "text": "1",
+              "confidence": 87.130257
+            },
+            {
+              "left": 2130,
+              "top": 1217,
+              "width": 133,
+              "height": 33,
+              "text": "$180.00",
+              "confidence": 96.075226
+            }
+          ],
+          "top": 1217,
+          "confidence": 94.1
+        },
+        {
+          "page": 1,
+          "text": "07/15/2026 93000 Electrocardiogram complete 1 $135.00",
+          "words": [
+            {
+              "left": 176,
+              "top": 1393,
+              "width": 185,
+              "height": 29,
+              "text": "07/15/2026",
+              "confidence": 96.036385
+            },
+            {
+              "left": 464,
+              "top": 1394,
+              "width": 101,
+              "height": 28,
+              "text": "93000",
+              "confidence": 96.659775
+            },
+            {
+              "left": 769,
+              "top": 1394,
+              "width": 300,
+              "height": 35,
+              "text": "Electrocardiogram",
+              "confidence": 91.486694
+            },
+            {
+              "left": 1082,
+              "top": 1394,
+              "width": 150,
+              "height": 35,
+              "text": "complete",
+              "confidence": 96.190521
+            },
+            {
+              "left": 1899,
+              "top": 1394,
+              "width": 11,
+              "height": 27,
+              "text": "1",
+              "confidence": 96.926102
+            },
+            {
+              "left": 2130,
+              "top": 1392,
+              "width": 133,
+              "height": 33,
+              "text": "$135.00",
+              "confidence": 96.268677
+            }
+          ],
+          "top": 1392,
+          "confidence": 95.59
+        },
+        {
+          "page": 1,
+          "text": "07/15/2026 80053 Comprehensive metabolic panel 1 $95.00",
+          "words": [
+            {
+              "left": 176,
+              "top": 1568,
+              "width": 185,
+              "height": 29,
+              "text": "07/15/2026",
+              "confidence": 96.036385
+            },
+            {
+              "left": 464,
+              "top": 1569,
+              "width": 101,
+              "height": 28,
+              "text": "80053",
+              "confidence": 96.760147
+            },
+            {
+              "left": 768,
+              "top": 1568,
+              "width": 260,
+              "height": 36,
+              "text": "Comprehensive",
+              "confidence": 96.749588
+            },
+            {
+              "left": 1042,
+              "top": 1569,
+              "width": 158,
+              "height": 27,
+              "text": "metabolic",
+              "confidence": 95.970398
+            },
+            {
+              "left": 1212,
+              "top": 1569,
+              "width": 88,
+              "height": 35,
+              "text": "panel",
+              "confidence": 96.216789
+            },
+            {
+              "left": 1899,
+              "top": 1569,
+              "width": 11,
+              "height": 27,
+              "text": "1",
+              "confidence": 96.926102
+            },
+            {
+              "left": 2130,
+              "top": 1567,
+              "width": 112,
+              "height": 33,
+              "text": "$95.00",
+              "confidence": 96.518478
+            }
+          ],
+          "top": 1567,
+          "confidence": 96.45
+        },
+        {
+          "page": 1,
+          "text": "Total charges: $660.00",
+          "words": [
+            {
+              "left": 1459,
+              "top": 1830,
+              "width": 106,
+              "height": 34,
+              "text": "Total",
+              "confidence": 96.472511
+            },
+            {
+              "left": 1582,
+              "top": 1830,
+              "width": 186,
+              "height": 43,
+              "text": "charges:",
+              "confidence": 96.134819
+            },
+            {
+              "left": 2131,
+              "top": 1828,
+              "width": 161,
+              "height": 40,
+              "text": "$660.00",
+              "confidence": 96.270706
+            }
+          ],
+          "top": 1828,
+          "confidence": 96.29
+        },
+        {
+          "page": 1,
+          "text": "Insurance payments: $0.00",
+          "words": [
+            {
+              "left": 1462,
+              "top": 1933,
+              "width": 178,
+              "height": 30,
+              "text": "Insurance",
+              "confidence": 95.883209
+            },
+            {
+              "left": 1655,
+              "top": 1934,
+              "width": 187,
+              "height": 38,
+              "text": "payments:",
+              "confidence": 96.325851
+            },
+            {
+              "left": 2130,
+              "top": 1931,
+              "width": 101,
+              "height": 37,
+              "text": "$0.00",
+              "confidence": 96.921799
+            }
+          ],
+          "top": 1931,
+          "confidence": 96.38
+        },
+        {
+          "page": 1,
+          "text": "Patient balance: $660.00",
+          "words": [
+            {
+              "left": 1461,
+              "top": 2033,
+              "width": 127,
+              "height": 30,
+              "text": "Patient",
+              "confidence": 96.247124
+            },
+            {
+              "left": 1602,
+              "top": 2033,
+              "width": 152,
+              "height": 30,
+              "text": "balance:",
+              "confidence": 96.297539
+            },
+            {
+              "left": 2130,
+              "top": 2031,
+              "width": 148,
+              "height": 37,
+              "text": "$660.00",
+              "confidence": 96.861389
+            }
+          ],
+          "top": 2031,
+          "confidence": 96.47
+        },
+        {
+          "page": 1,
+          "text": "TEST FIXTURE ONLY. Do not use these amounts as reference prices.",
+          "words": [
+            {
+              "left": 175,
+              "top": 2894,
+              "width": 95,
+              "height": 28,
+              "text": "TEST",
+              "confidence": 96.241722
+            },
+            {
+              "left": 284,
+              "top": 2895,
+              "width": 156,
+              "height": 28,
+              "text": "FIXTURE",
+              "confidence": 96.386055
+            },
+            {
+              "left": 454,
+              "top": 2894,
+              "width": 108,
+              "height": 29,
+              "text": "ONLY.",
+              "confidence": 96.312042
+            },
+            {
+              "left": 578,
+              "top": 2895,
+              "width": 44,
+              "height": 27,
+              "text": "Do",
+              "confidence": 96.3909
+            },
+            {
+              "left": 635,
+              "top": 2896,
+              "width": 50,
+              "height": 26,
+              "text": "not",
+              "confidence": 96.3909
+            },
+            {
+              "left": 698,
+              "top": 2902,
+              "width": 57,
+              "height": 20,
+              "text": "use",
+              "confidence": 96.015282
+            },
+            {
+              "left": 767,
+              "top": 2895,
+              "width": 90,
+              "height": 27,
+              "text": "these",
+              "confidence": 96.399292
+            },
+            {
+              "left": 870,
+              "top": 2896,
+              "width": 142,
+              "height": 26,
+              "text": "amounts",
+              "confidence": 96.434593
+            },
+            {
+              "left": 1024,
+              "top": 2902,
+              "width": 38,
+              "height": 20,
+              "text": "as",
+              "confidence": 96.380486
+            },
+            {
+              "left": 1075,
+              "top": 2894,
+              "width": 155,
+              "height": 28,
+              "text": "reference",
+              "confidence": 96.533867
+            },
+            {
+              "left": 1244,
+              "top": 2895,
+              "width": 106,
+              "height": 35,
+              "text": "prices.",
+              "confidence": 96.713943
+            }
+          ],
+          "top": 2894,
+          "confidence": 96.38
+        },
+        {
+          "page": 1,
+          "text": "Contact: no real provider. Payment instructions intentionally omitted.",
+          "words": [
+            {
+              "left": 177,
+              "top": 2960,
+              "width": 135,
+              "height": 29,
+              "text": "Contact:",
+              "confidence": 96.545883
+            },
+            {
+              "left": 327,
+              "top": 2968,
+              "width": 38,
+              "height": 20,
+              "text": "no",
+              "confidence": 96.785103
+            },
+            {
+              "left": 379,
+              "top": 2961,
+              "width": 58,
+              "height": 27,
+              "text": "real",
+              "confidence": 95.212761
+            },
+            {
+              "left": 452,
+              "top": 2961,
+              "width": 141,
+              "height": 35,
+              "text": "provider.",
+              "confidence": 95.710327
+            },
+            {
+              "left": 609,
+              "top": 2961,
+              "width": 145,
+              "height": 35,
+              "text": "Payment",
+              "confidence": 96.727211
+            },
+            {
+              "left": 767,
+              "top": 2961,
+              "width": 186,
+              "height": 27,
+              "text": "instructions",
+              "confidence": 96.170219
+            },
+            {
+              "left": 967,
+              "top": 2961,
+              "width": 195,
+              "height": 35,
+              "text": "intentionally",
+              "confidence": 96.267624
+            },
+            {
+              "left": 1174,
+              "top": 2961,
+              "width": 130,
+              "height": 27,
+              "text": "omitted.",
+              "confidence": 96.412582
+            }
+          ],
+          "top": 2960,
+          "confidence": 96.23
+        },
+        {
+          "page": 1,
+          "text": "Page 1 of 1",
+          "words": [
+            {
+              "left": 2185,
+              "top": 3074,
+              "width": 84,
+              "height": 35,
+              "text": "Page",
+              "confidence": 96.777321
+            },
+            {
+              "left": 2285,
+              "top": 3074,
+              "width": 10,
+              "height": 27,
+              "text": "1",
+              "confidence": 92.963356
+            },
+            {
+              "left": 2313,
+              "top": 3073,
+              "width": 32,
+              "height": 28,
+              "text": "of",
+              "confidence": 92.963356
+            },
+            {
+              "left": 2358,
+              "top": 3074,
+              "width": 10,
+              "height": 27,
+              "text": "1",
+              "confidence": 96.569809
+            }
+          ],
+          "top": 3073,
+          "confidence": 94.82
+        }
+      ]
+    }
+  ],
+  "engine": "Tesseract",
+  "language": "eng",
+  "processing": "local; in-memory; no LLM",
+  "input_sha256": "e4713376271b1256e6d2c1bca3f93f0de76a560563a9a183bd44c0679050f4e5",
+  "engine_version": "tesseract v5.5.3.20260724"
+}

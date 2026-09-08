@@ -1,0 +1,16 @@
+SYNTHETIC COMMUNITY CLINIC :
+SYNTHETIC TEST BILL - NOT FOR PAYMENT
+All identities and charges are fabricated for software testing.
+ITEMIZED STATEMENT
+Patient: TEST PERSON 03 Account: SAMPLE-03
+Statement date: 08/15/2026 Currency: USD
+Date Code Description Qty Charge
+08/04/2026 99214 Office visit - established patient 1 $320.00
+08/04/2026 J1885 Injection ketorolac per 15 mg 2 $60.00
+08/04/2026 22272 Unclear procedure code 1 $88.00
+08/04/2026 80053 Comprehensive metabolic panel - $95.00
+08/04/2026 99213 Office visit - amount obscured 1 222?
+Total charges: unreadable in this synthetic test
+TEST FIXTURE ONLY. Do not use these amounts as reference prices.
+Contact: no real provider. Payment instructions intentionally omitted.
+Page 1 of 1

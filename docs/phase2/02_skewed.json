@@ -1,0 +1,1181 @@
+{
+  "items": [
+    {
+      "page": 1,
+      "line_index": 7,
+      "service_date": "2026-07-20",
+      "code": "97110",
+      "modifier": "",
+      "description": "Therapeutic exercises",
+      "quantity": "2",
+      "charged_cents": 18000,
+      "charged_usd": "180.00",
+      "ocr_confidence": 96.52,
+      "field_confidence": {
+        "description": 96.3,
+        "code": 96.11,
+        "quantity": 97.01,
+        "unit_price": 96.72,
+        "charge": 96.45
+      },
+      "raw_text": "07/20/2026 Therapeutic exercises 97110 2 $90.00 $180.00",
+      "raw_columns": {
+        "description": "Therapeutic exercises",
+        "code": "97110",
+        "quantity": "2",
+        "unit_price": "$90.00",
+        "charge": "$180.00"
+      },
+      "issues": [],
+      "status": "parsed"
+    },
+    {
+      "page": 1,
+      "line_index": 8,
+      "service_date": "2026-07-20",
+      "code": "71046",
+      "modifier": "26",
+      "description": "Chest X-ray interpretation",
+      "quantity": null,
+      "charged_cents": 7500,
+      "charged_usd": "75.00",
+      "ocr_confidence": 93.08,
+      "field_confidence": {
+        "description": 95.49,
+        "code": 91.47,
+        "quantity": 74.04,
+        "unit_price": 96.87,
+        "charge": 96.62
+      },
+      "raw_text": "07/20/2026 Chest X-ray interpretation 71046-26 1 $75.00 $75.00",
+      "raw_columns": {
+        "description": "Chest X-ray interpretation",
+        "code": "71046-26",
+        "quantity": "1",
+        "unit_price": "$75.00",
+        "charge": "$75.00"
+      },
+      "issues": [
+        "low_confidence_quantity"
+      ],
+      "status": "needs_review"
+    },
+    {
+      "page": 1,
+      "line_index": 9,
+      "service_date": "2026-07-20",
+      "code": "93000",
+      "modifier": "",
+      "description": "Electrocardiogram complete",
+      "quantity": "1",
+      "charged_cents": 13500,
+      "charged_usd": "135.00",
+      "ocr_confidence": 95.59,
+      "field_confidence": {
+        "description": 91.14,
+        "code": 95.36,
+        "quantity": 96.86,
+        "unit_price": 96.79,
+        "charge": 96.35
+      },
+      "raw_text": "07/20/2026 Electrocardiogram complete 93000 1 $135.00 $135.00",
+      "raw_columns": {
+        "description": "Electrocardiogram complete",
+        "code": "93000",
+        "quantity": "1",
+        "unit_price": "$135.00",
+        "charge": "$135.00"
+      },
+      "issues": [],
+      "status": "parsed"
+    },
+    {
+      "page": 1,
+      "line_index": 10,
+      "service_date": "2026-07-20",
+      "code": null,
+      "modifier": null,
+      "description": "Influenza vaccine administration",
+      "quantity": "1",
+      "charged_cents": 4000,
+      "charged_usd": "40.00",
+      "ocr_confidence": 93.07,
+      "field_confidence": {
+        "description": 96.52,
+        "code": 69.53,
+        "quantity": 96.94,
+        "unit_price": 96.57,
+        "charge": 95.46
+      },
+      "raw_text": "07/20/2026 Influenza vaccine administration G0008 1 $40.00 $40.00",
+      "raw_columns": {
+        "description": "Influenza vaccine administration",
+        "code": "G0008",
+        "quantity": "1",
+        "unit_price": "$40.00",
+        "charge": "$40.00"
+      },
+      "issues": [
+        "low_confidence_code"
+      ],
+      "status": "needs_review"
+    }
+  ],
+  "review_rows": [
+    {
+      "page": 1,
+      "text": "07/20/2026 Chest X-ray interpretation 71046-26 1 $75.00 $75.00",
+      "issues": [
+        "low_confidence_quantity"
+      ]
+    },
+    {
+      "page": 1,
+      "text": "07/20/2026 Influenza vaccine administration G0008 1 $40.00 $40.00",
+      "issues": [
+        "low_confidence_code"
+      ]
+    }
+  ],
+  "ignored_lines": [
+    {
+      "page": 1,
+      "text": "SYNTHETIC REHABILITATION CLINIC",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "SYNTHETIC TEST BILL - NOT FOR PAYMENT",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "All identities and charges are fabricated for software testing.",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "ITEMIZED STATEMENT",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "Patient: TEST PERSON 02 Account: SAMPLE-02",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "Statement date: 08/15/2026 Currency: USD",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "Date Description Code Qty Price Charge",
+      "reason": "table_header"
+    },
+    {
+      "page": 1,
+      "text": "Total charges: $430.00",
+      "reason": "summary_not_line_item"
+    },
+    {
+      "page": 1,
+      "text": "Insurance payments: $0.00",
+      "reason": "summary_not_line_item"
+    },
+    {
+      "page": 1,
+      "text": "Patient balance: $430.00",
+      "reason": "summary_not_line_item"
+    },
+    {
+      "page": 1,
+      "text": "TEST FIXTURE ONLY. Do not use these amounts as reference prices.",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "Contact: no real provider. Payment instructions intentionally omitted. :",
+      "reason": "not_recognized_as_service_row"
+    },
+    {
+      "page": 1,
+      "text": "Page 1 of 1",
+      "reason": "not_recognized_as_service_row"
+    }
+  ],
+  "summary": {
+    "candidate_rows": 4,
+    "parsed_rows": 2,
+    "review_rows": 2
+  },
+  "warnings": [],
+  "pages": [
+    {
+      "page": 1,
+      "original_shape": [
+        2200,
+        1700
+      ],
+      "processed_shape": [
+        2200,
+        1700
+      ],
+      "deskew_correction_degrees": -3.0,
+      "laplacian_variance": 291.33,
+      "method": "median denoise; projection deskew +/-5 degrees; adaptive Gaussian threshold; rule removal",
+      "text": "SYNTHETIC REHABILITATION CLINIC\nSYNTHETIC TEST BILL - NOT FOR PAYMENT\nAll identities and charges are fabricated for software testing.\nITEMIZED STATEMENT\nPatient: TEST PERSON 02 Account: SAMPLE-02\nStatement date: 08/15/2026 Currency: USD\nDate Description Code Qty Price Charge\n07/20/2026 Therapeutic exercises 97110 2 $90.00 $180.00\n07/20/2026 Chest X-ray interpretation 71046-26 1 $75.00 $75.00\n07/20/2026 Electrocardiogram complete 93000 1 $135.00 $135.00\n07/20/2026 Influenza vaccine administration G0008 1 $40.00 $40.00\nTotal charges: $430.00\nInsurance payments: $0.00\nPatient balance: $430.00\nTEST FIXTURE ONLY. Do not use these amounts as reference prices.\nContact: no real provider. Payment instructions intentionally omitted. :\nPage 1 of 1",
+      "lines": [
+        {
+          "page": 1,
+          "text": "SYNTHETIC REHABILITATION CLINIC",
+          "words": [
+            {
+              "left": 123,
+              "top": 131,
+              "width": 249,
+              "height": 34,
+              "text": "SYNTHETIC",
+              "confidence": 96.361633
+            },
+            {
+              "left": 389,
+              "top": 131,
+              "width": 369,
+              "height": 34,
+              "text": "REHABILITATION",
+              "confidence": 95.711868
+            },
+            {
+              "left": 776,
+              "top": 131,
+              "width": 144,
+              "height": 33,
+              "text": "CLINIC",
+              "confidence": 96.828827
+            }
+          ],
+          "top": 131,
+          "confidence": 96.3
+        },
+        {
+          "page": 1,
+          "text": "SYNTHETIC TEST BILL - NOT FOR PAYMENT",
+          "words": [
+            {
+              "left": 123,
+              "top": 213,
+              "width": 171,
+              "height": 24,
+              "text": "SYNTHETIC",
+              "confidence": 96.042992
+            },
+            {
+              "left": 304,
+              "top": 213,
+              "width": 78,
+              "height": 24,
+              "text": "TEST",
+              "confidence": 95.896576
+            },
+            {
+              "left": 392,
+              "top": 213,
+              "width": 66,
+              "height": 23,
+              "text": "BILL",
+              "confidence": 91.768822
+            },
+            {
+              "left": 468,
+              "top": 226,
+              "width": 9,
+              "height": 5,
+              "text": "-",
+              "confidence": 91.768822
+            },
+            {
+              "left": 487,
+              "top": 213,
+              "width": 63,
+              "height": 24,
+              "text": "NOT",
+              "confidence": 95.039131
+            },
+            {
+              "left": 560,
+              "top": 213,
+              "width": 62,
+              "height": 24,
+              "text": "FOR",
+              "confidence": 96.297325
+            },
+            {
+              "left": 633,
+              "top": 214,
+              "width": 148,
+              "height": 23,
+              "text": "PAYMENT",
+              "confidence": 95.723808
+            }
+          ],
+          "top": 213,
+          "confidence": 94.65
+        },
+        {
+          "page": 1,
+          "text": "All identities and charges are fabricated for software testing.",
+          "words": [
+            {
+              "left": 122,
+              "top": 266,
+              "width": 29,
+              "height": 20,
+              "text": "All",
+              "confidence": 95.723816
+            },
+            {
+              "left": 162,
+              "top": 266,
+              "width": 108,
+              "height": 20,
+              "text": "identities",
+              "confidence": 95.723816
+            },
+            {
+              "left": 279,
+              "top": 266,
+              "width": 44,
+              "height": 20,
+              "text": "and",
+              "confidence": 96.663849
+            },
+            {
+              "left": 333,
+              "top": 266,
+              "width": 97,
+              "height": 26,
+              "text": "charges",
+              "confidence": 96.513084
+            },
+            {
+              "left": 439,
+              "top": 271,
+              "width": 39,
+              "height": 15,
+              "text": "are",
+              "confidence": 96.592934
+            },
+            {
+              "left": 486,
+              "top": 265,
+              "width": 121,
+              "height": 22,
+              "text": "fabricated",
+              "confidence": 96.787743
+            },
+            {
+              "left": 616,
+              "top": 265,
+              "width": 33,
+              "height": 22,
+              "text": "for",
+              "confidence": 96.968689
+            },
+            {
+              "left": 657,
+              "top": 265,
+              "width": 103,
+              "height": 21,
+              "text": "software",
+              "confidence": 96.746407
+            },
+            {
+              "left": 769,
+              "top": 266,
+              "width": 87,
+              "height": 27,
+              "text": "testing.",
+              "confidence": 96.39817
+            }
+          ],
+          "top": 265,
+          "confidence": 96.46
+        },
+        {
+          "page": 1,
+          "text": "ITEMIZED STATEMENT",
+          "words": [
+            {
+              "left": 118,
+              "top": 396,
+              "width": 166,
+              "height": 26,
+              "text": "ITEMIZED",
+              "confidence": 96.128944
+            },
+            {
+              "left": 296,
+              "top": 395,
+              "width": 219,
+              "height": 28,
+              "text": "STATEMENT",
+              "confidence": 96.0224
+            }
+          ],
+          "top": 395,
+          "confidence": 96.08
+        },
+        {
+          "page": 1,
+          "text": "Patient: TEST PERSON 02 Account: SAMPLE-02",
+          "words": [
+            {
+              "left": 118,
+              "top": 469,
+              "width": 91,
+              "height": 21,
+              "text": "Patient:",
+              "confidence": 95.665459
+            },
+            {
+              "left": 218,
+              "top": 468,
+              "width": 71,
+              "height": 22,
+              "text": "TEST",
+              "confidence": 95.801147
+            },
+            {
+              "left": 298,
+              "top": 468,
+              "width": 115,
+              "height": 22,
+              "text": "PERSON",
+              "confidence": 96.631699
+            },
+            {
+              "left": 423,
+              "top": 469,
+              "width": 29,
+              "height": 21,
+              "text": "02",
+              "confidence": 96.63826
+            },
+            {
+              "left": 972,
+              "top": 469,
+              "width": 107,
+              "height": 21,
+              "text": "Account:",
+              "confidence": 93.28653
+            },
+            {
+              "left": 1089,
+              "top": 468,
+              "width": 151,
+              "height": 22,
+              "text": "SAMPLE-02",
+              "confidence": 90.48111
+            }
+          ],
+          "top": 468,
+          "confidence": 94.75
+        },
+        {
+          "page": 1,
+          "text": "Statement date: 08/15/2026 Currency: USD",
+          "words": [
+            {
+              "left": 117,
+              "top": 518,
+              "width": 126,
+              "height": 22,
+              "text": "Statement",
+              "confidence": 96.268929
+            },
+            {
+              "left": 252,
+              "top": 519,
+              "width": 59,
+              "height": 21,
+              "text": "date:",
+              "confidence": 96.642578
+            },
+            {
+              "left": 321,
+              "top": 518,
+              "width": 138,
+              "height": 22,
+              "text": "08/15/2026",
+              "confidence": 96.314949
+            },
+            {
+              "left": 973,
+              "top": 518,
+              "width": 118,
+              "height": 27,
+              "text": "Currency:",
+              "confidence": 96.297859
+            },
+            {
+              "left": 1101,
+              "top": 518,
+              "width": 57,
+              "height": 22,
+              "text": "USD",
+              "confidence": 95.317627
+            }
+          ],
+          "top": 518,
+          "confidence": 96.17
+        },
+        {
+          "page": 1,
+          "text": "Date Description Code Qty Price Charge",
+          "words": [
+            {
+              "left": 118,
+              "top": 613,
+              "width": 52,
+              "height": 19,
+              "text": "Date",
+              "confidence": 96.415878
+            },
+            {
+              "left": 301,
+              "top": 608,
+              "width": 135,
+              "height": 34,
+              "text": "Description",
+              "confidence": 96.517136
+            },
+            {
+              "left": 875,
+              "top": 612,
+              "width": 62,
+              "height": 20,
+              "text": "Code",
+              "confidence": 95.000534
+            },
+            {
+              "left": 1098,
+              "top": 608,
+              "width": 40,
+              "height": 34,
+              "text": "Qty",
+              "confidence": 77.400101
+            },
+            {
+              "left": 1201,
+              "top": 608,
+              "width": 59,
+              "height": 34,
+              "text": "Price",
+              "confidence": 96.730789
+            },
+            {
+              "left": 1420,
+              "top": 612,
+              "width": 85,
+              "height": 25,
+              "text": "Charge",
+              "confidence": 96.95929
+            }
+          ],
+          "top": 608,
+          "confidence": 93.17
+        },
+        {
+          "page": 1,
+          "text": "07/20/2026 Therapeutic exercises 97110 2 $90.00 $180.00",
+          "words": [
+            {
+              "left": 117,
+              "top": 695,
+              "width": 124,
+              "height": 20,
+              "text": "07/20/2026",
+              "confidence": 96.774834
+            },
+            {
+              "left": 300,
+              "top": 695,
+              "width": 132,
+              "height": 24,
+              "text": "Therapeutic",
+              "confidence": 96.303375
+            },
+            {
+              "left": 439,
+              "top": 695,
+              "width": 105,
+              "height": 20,
+              "text": "exercises",
+              "confidence": 96.303375
+            },
+            {
+              "left": 875,
+              "top": 696,
+              "width": 69,
+              "height": 19,
+              "text": "97110",
+              "confidence": 96.111542
+            },
+            {
+              "left": 1097,
+              "top": 695,
+              "width": 13,
+              "height": 20,
+              "text": "2",
+              "confidence": 97.007889
+            },
+            {
+              "left": 1201,
+              "top": 691,
+              "width": 75,
+              "height": 33,
+              "text": "$90.00",
+              "confidence": 96.719437
+            },
+            {
+              "left": 1420,
+              "top": 695,
+              "width": 89,
+              "height": 22,
+              "text": "$180.00",
+              "confidence": 96.449226
+            }
+          ],
+          "top": 691,
+          "confidence": 96.52
+        },
+        {
+          "page": 1,
+          "text": "07/20/2026 Chest X-ray interpretation 71046-26 1 $75.00 $75.00",
+          "words": [
+            {
+              "left": 117,
+              "top": 812,
+              "width": 124,
+              "height": 20,
+              "text": "07/20/2026",
+              "confidence": 96.766594
+            },
+            {
+              "left": 301,
+              "top": 812,
+              "width": 64,
+              "height": 20,
+              "text": "Chest",
+              "confidence": 96.779526
+            },
+            {
+              "left": 372,
+              "top": 812,
+              "width": 60,
+              "height": 25,
+              "text": "X-ray",
+              "confidence": 95.489258
+            },
+            {
+              "left": 439,
+              "top": 812,
+              "width": 144,
+              "height": 24,
+              "text": "interpretation",
+              "confidence": 96.635658
+            },
+            {
+              "left": 875,
+              "top": 808,
+              "width": 105,
+              "height": 34,
+              "text": "71046-26",
+              "confidence": 91.474449
+            },
+            {
+              "left": 1099,
+              "top": 813,
+              "width": 8,
+              "height": 18,
+              "text": "1",
+              "confidence": 74.037903
+            },
+            {
+              "left": 1200,
+              "top": 812,
+              "width": 76,
+              "height": 22,
+              "text": "$75.00",
+              "confidence": 96.86882
+            },
+            {
+              "left": 1420,
+              "top": 812,
+              "width": 75,
+              "height": 22,
+              "text": "$75.00",
+              "confidence": 96.615395
+            }
+          ],
+          "top": 808,
+          "confidence": 93.08
+        },
+        {
+          "page": 1,
+          "text": "07/20/2026 Electrocardiogram complete 93000 1 $135.00 $135.00",
+          "words": [
+            {
+              "left": 117,
+              "top": 928,
+              "width": 124,
+              "height": 20,
+              "text": "07/20/2026",
+              "confidence": 96.815643
+            },
+            {
+              "left": 301,
+              "top": 928,
+              "width": 201,
+              "height": 25,
+              "text": "Electrocardiogram",
+              "confidence": 91.141838
+            },
+            {
+              "left": 510,
+              "top": 928,
+              "width": 100,
+              "height": 25,
+              "text": "complete",
+              "confidence": 95.838402
+            },
+            {
+              "left": 875,
+              "top": 924,
+              "width": 69,
+              "height": 33,
+              "text": "93000",
+              "confidence": 95.357498
+            },
+            {
+              "left": 1099,
+              "top": 929,
+              "width": 8,
+              "height": 18,
+              "text": "1",
+              "confidence": 96.86203
+            },
+            {
+              "left": 1200,
+              "top": 928,
+              "width": 90,
+              "height": 21,
+              "text": "$135.00",
+              "confidence": 96.787476
+            },
+            {
+              "left": 1420,
+              "top": 928,
+              "width": 89,
+              "height": 22,
+              "text": "$135.00",
+              "confidence": 96.345406
+            }
+          ],
+          "top": 924,
+          "confidence": 95.59
+        },
+        {
+          "page": 1,
+          "text": "07/20/2026 Influenza vaccine administration G0008 1 $40.00 $40.00",
+          "words": [
+            {
+              "left": 117,
+              "top": 1045,
+              "width": 124,
+              "height": 20,
+              "text": "07/20/2026",
+              "confidence": 96.409691
+            },
+            {
+              "left": 302,
+              "top": 1045,
+              "width": 98,
+              "height": 20,
+              "text": "Influenza",
+              "confidence": 96.518585
+            },
+            {
+              "left": 409,
+              "top": 1045,
+              "width": 83,
+              "height": 20,
+              "text": "vaccine",
+              "confidence": 96.559242
+            },
+            {
+              "left": 500,
+              "top": 1045,
+              "width": 154,
+              "height": 20,
+              "text": "administration",
+              "confidence": 96.586533
+            },
+            {
+              "left": 875,
+              "top": 1041,
+              "width": 74,
+              "height": 34,
+              "text": "G0008",
+              "confidence": 69.528168
+            },
+            {
+              "left": 1099,
+              "top": 1046,
+              "width": 8,
+              "height": 18,
+              "text": "1",
+              "confidence": 96.939171
+            },
+            {
+              "left": 1196,
+              "top": 1041,
+              "width": 80,
+              "height": 34,
+              "text": "$40.00",
+              "confidence": 96.574181
+            },
+            {
+              "left": 1420,
+              "top": 1045,
+              "width": 75,
+              "height": 21,
+              "text": "$40.00",
+              "confidence": 95.464981
+            }
+          ],
+          "top": 1041,
+          "confidence": 93.07
+        },
+        {
+          "page": 1,
+          "text": "Total charges: $430.00",
+          "words": [
+            {
+              "left": 972,
+              "top": 1220,
+              "width": 72,
+              "height": 23,
+              "text": "Total",
+              "confidence": 95.92115
+            },
+            {
+              "left": 1055,
+              "top": 1220,
+              "width": 124,
+              "height": 29,
+              "text": "charges:",
+              "confidence": 96.361351
+            },
+            {
+              "left": 1420,
+              "top": 1218,
+              "width": 108,
+              "height": 27,
+              "text": "$430.00",
+              "confidence": 96.433449
+            }
+          ],
+          "top": 1218,
+          "confidence": 96.24
+        },
+        {
+          "page": 1,
+          "text": "Insurance payments: $0.00",
+          "words": [
+            {
+              "left": 974,
+              "top": 1288,
+              "width": 119,
+              "height": 20,
+              "text": "Insurance",
+              "confidence": 96.362144
+            },
+            {
+              "left": 1103,
+              "top": 1288,
+              "width": 125,
+              "height": 27,
+              "text": "payments:",
+              "confidence": 96.418282
+            },
+            {
+              "left": 1420,
+              "top": 1286,
+              "width": 68,
+              "height": 25,
+              "text": "$0.00",
+              "confidence": 96.953926
+            }
+          ],
+          "top": 1286,
+          "confidence": 96.58
+        },
+        {
+          "page": 1,
+          "text": "Patient balance: $430.00",
+          "words": [
+            {
+              "left": 973,
+              "top": 1355,
+              "width": 85,
+              "height": 20,
+              "text": "Patient",
+              "confidence": 96.772179
+            },
+            {
+              "left": 1067,
+              "top": 1354,
+              "width": 103,
+              "height": 22,
+              "text": "balance:",
+              "confidence": 96.770081
+            },
+            {
+              "left": 1420,
+              "top": 1354,
+              "width": 99,
+              "height": 24,
+              "text": "$430.00",
+              "confidence": 96.945831
+            }
+          ],
+          "top": 1354,
+          "confidence": 96.83
+        },
+        {
+          "page": 1,
+          "text": "TEST FIXTURE ONLY. Do not use these amounts as reference prices.",
+          "words": [
+            {
+              "left": 117,
+              "top": 1928,
+              "width": 63,
+              "height": 20,
+              "text": "TEST",
+              "confidence": 95.691971
+            },
+            {
+              "left": 189,
+              "top": 1928,
+              "width": 104,
+              "height": 20,
+              "text": "FIXTURE",
+              "confidence": 95.691971
+            },
+            {
+              "left": 302,
+              "top": 1928,
+              "width": 73,
+              "height": 20,
+              "text": "ONLY.",
+              "confidence": 95.951691
+            },
+            {
+              "left": 385,
+              "top": 1929,
+              "width": 30,
+              "height": 18,
+              "text": "Do",
+              "confidence": 95.951691
+            },
+            {
+              "left": 423,
+              "top": 1930,
+              "width": 34,
+              "height": 18,
+              "text": "not",
+              "confidence": 96.910248
+            },
+            {
+              "left": 465,
+              "top": 1933,
+              "width": 39,
+              "height": 15,
+              "text": "use",
+              "confidence": 95.925659
+            },
+            {
+              "left": 511,
+              "top": 1929,
+              "width": 61,
+              "height": 19,
+              "text": "these",
+              "confidence": 96.781639
+            },
+            {
+              "left": 580,
+              "top": 1930,
+              "width": 95,
+              "height": 17,
+              "text": "amounts",
+              "confidence": 96.908638
+            },
+            {
+              "left": 682,
+              "top": 1933,
+              "width": 26,
+              "height": 15,
+              "text": "as",
+              "confidence": 96.955704
+            },
+            {
+              "left": 716,
+              "top": 1928,
+              "width": 104,
+              "height": 19,
+              "text": "reference",
+              "confidence": 96.955704
+            },
+            {
+              "left": 829,
+              "top": 1928,
+              "width": 71,
+              "height": 24,
+              "text": "prices.",
+              "confidence": 96.285667
+            }
+          ],
+          "top": 1928,
+          "confidence": 96.36
+        },
+        {
+          "page": 1,
+          "text": "Contact: no real provider. Payment instructions intentionally omitted. :",
+          "words": [
+            {
+              "left": 117,
+              "top": 1973,
+              "width": 91,
+              "height": 20,
+              "text": "Contact:",
+              "confidence": 96.926651
+            },
+            {
+              "left": 217,
+              "top": 1978,
+              "width": 27,
+              "height": 14,
+              "text": "no",
+              "confidence": 96.942055
+            },
+            {
+              "left": 252,
+              "top": 1974,
+              "width": 40,
+              "height": 18,
+              "text": "real",
+              "confidence": 92.56144
+            },
+            {
+              "left": 301,
+              "top": 1974,
+              "width": 95,
+              "height": 24,
+              "text": "provider.",
+              "confidence": 96.415237
+            },
+            {
+              "left": 405,
+              "top": 1974,
+              "width": 97,
+              "height": 24,
+              "text": "Payment",
+              "confidence": 96.71344
+            },
+            {
+              "left": 511,
+              "top": 1973,
+              "width": 125,
+              "height": 20,
+              "text": "instructions",
+              "confidence": 96.846359
+            },
+            {
+              "left": 644,
+              "top": 1973,
+              "width": 131,
+              "height": 25,
+              "text": "intentionally",
+              "confidence": 95.344414
+            },
+            {
+              "left": 782,
+              "top": 1974,
+              "width": 88,
+              "height": 19,
+              "text": "omitted.",
+              "confidence": 96.311554
+            },
+            {
+              "left": 1653,
+              "top": 1995,
+              "width": 1,
+              "height": 3,
+              "text": ":",
+              "confidence": 14.78492
+            }
+          ],
+          "top": 1973,
+          "confidence": 86.98
+        },
+        {
+          "page": 1,
+          "text": "Page 1 of 1",
+          "words": [
+            {
+              "left": 1456,
+              "top": 2048,
+              "width": 57,
+              "height": 25,
+              "text": "Page",
+              "confidence": 96.420044
+            },
+            {
+              "left": 1523,
+              "top": 2049,
+              "width": 8,
+              "height": 18,
+              "text": "1",
+              "confidence": 90.127434
+            },
+            {
+              "left": 1541,
+              "top": 2048,
+              "width": 22,
+              "height": 19,
+              "text": "of",
+              "confidence": 90.127434
+            },
+            {
+              "left": 1572,
+              "top": 2049,
+              "width": 8,
+              "height": 19,
+              "text": "1",
+              "confidence": 96.662231
+            }
+          ],
+          "top": 2048,
+          "confidence": 93.33
+        }
+      ]
+    }
+  ],
+  "engine": "Tesseract",
+  "language": "eng",
+  "processing": "local; in-memory; no LLM",
+  "input_sha256": "fecd8e3e8dd1cfff5990be23493dafc5dff79cf24143a11f71c17dbfd9762757",
+  "engine_version": "tesseract v5.5.3.20260724"
+}

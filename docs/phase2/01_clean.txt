@@ -1,0 +1,17 @@
+SYNTHETIC OUTPATIENT CLINIC
+SYNTHETIC TEST BILL - NOT FOR PAYMENT
+All identities and charges are fabricated for software testing.
+ITEMIZED STATEMENT
+Patient: TEST PERSON 01 Account: SAMPLE-01
+Statement date: 08/15/2026 Currency: USD
+Date Code Description Qty Charge
+07/15/2026 99213 Office visit - established patient 1 $250.00
+07/15/2026 71046 Chest X-ray - two views 1 $180.00
+07/15/2026 93000 Electrocardiogram complete 1 $135.00
+07/15/2026 80053 Comprehensive metabolic panel 1 $95.00
+Total charges: $660.00
+Insurance payments: $0.00
+Patient balance: $660.00
+TEST FIXTURE ONLY. Do not use these amounts as reference prices.
+Contact: no real provider. Payment instructions intentionally omitted.
+Page 1 of 1

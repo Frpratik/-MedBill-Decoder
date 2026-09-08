@@ -2,3 +2,6 @@ __pycache__/
 .venv/
 data/raw/
 data/processed/
+.tools/
+tmp/
+docs/source-previews/

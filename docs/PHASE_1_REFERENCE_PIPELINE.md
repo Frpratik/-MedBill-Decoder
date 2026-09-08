@@ -1,6 +1,6 @@
 # Phase 1 checkpoint: reference data pipeline
 
-Phase 0 sources and benchmark wording were approved by the user. This phase implements ingestion and lookups only. Phase 2 (OCR and parsing) remains pending approval.
+Phase 0 sources and benchmark wording were approved by the user. This document records the completed Phase 1 checkpoint, subsequently approved by the user. Phase 2 results are documented separately.
 
 ## Implemented
 

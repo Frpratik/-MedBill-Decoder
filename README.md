@@ -1,6 +1,6 @@
 # MedBill Decoder
 
-Phase 1: a deterministic local lookup of public CMS Medicare references. The user approved Phase 0 sources and the wording **amount above Medicare benchmark**. OCR, bill parsing, statistical comparisons, explanations, API, and UI are not implemented yet.
+Phases 1–2: a local CMS reference lookup plus real Tesseract/OpenCV OCR and line-item parsing. The approved wording is **amount above Medicare benchmark**. Statistical comparisons, explanations, API and UI remain for later phases.
 
 ## Setup
 
@@ -9,17 +9,21 @@ Python 3.11 or later:
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+./scripts/setup_windows_ocr.ps1
 .\.venv\Scripts\python.exe -m medbill.ingest
 .\.venv\Scripts\python.exe -m medbill.verify
+.\.venv\Scripts\python.exe -m medbill.evaluate_ocr
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
 The five downloaded archives must remain in `data/raw`. Exact official URLs and pinned hashes are in `medbill/ingest.py`, and source context is in `docs/PHASE_0_DATA_SOURCES.md`. The build validates every archive's SHA-256 before reading it. Changed releases require review and a deliberate pin update. The build runs offline once dependencies and archives are present. Expect several minutes and several hundred MB for the database and temporary build file.
 
-On the current Codex workstation, dependencies are already installed in the bundled runtime:
+The Windows OCR setup uses an existing 7-Zip installation to extract the pinned Tesseract release locally and downloads the official English model. Both downloads are checksum-verified. It does not run the installer or change system PATH. Alternatively, install Tesseract using the [official instructions](https://tesseract-ocr.github.io/tessdoc/Installation.html), with English traineddata, and set `TESSERACT_CMD` if the executable is not on PATH.
+
+On the current workstation, the project-local `.venv` and `.tools/tesseract` are already configured:
 
 ```powershell
-$medbillPython = 'C:\Users\prati\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
+$medbillPython = '.\.venv\Scripts\python.exe'
 & $medbillPython -m medbill.ingest
 & $medbillPython -m medbill.verify
 & $medbillPython -m unittest discover -s tests -v
@@ -35,6 +39,17 @@ For a professional component, supply `--modifier 26`. Blank modifier means the u
 
 The lookup requires a carrier/locality pair, setting, category, and date. It currently supports July 1–September 30, 2026. Other dates return `unsupported_date`. Facility amounts are physician-service amounts in a facility setting, not the hospital's facility charge. Published benchmarks are not insurance benefits, amounts owed, coverage determinations, or proof of an overcharge.
 
+## OCR and parsing
+
+```powershell
+.\.venv\Scripts\python.exe -m medbill.ocr output/pdf/01_clean.pdf --synthetic
+.\.venv\Scripts\python.exe -m medbill.evaluate_ocr
+```
+
+Only synthetic/public sample data is permitted. Every PDF is rasterized before local OCR; no text-layer shortcut or vision API is used. OpenCV denoises, deskews, thresholds and removes table rules. Tesseract returns word coordinates/confidence. Parsing preserves uncertain raw values and withholds low-confidence critical fields. The runtime passes images through stdin/stdout without writing temporary bill files.
+
+Three synthetic fixtures and their generator are included. `samples/README.md` cites the bill-format references. `docs/PHASE_2_OCR_PARSING.md` records actual extraction results and failures: 13 candidate rows, eight complete and five requiring review, including two correct fields withheld by the conservative confidence policy. This is a small development regression, not a general OCR accuracy estimate. Handwriting, complex/wrapped layouts and severe camera distortion remain unvalidated.
+
 ## Outputs
 
 - `data/processed/reference.sqlite`: indexed public reference snapshot, opened read-only at runtime.
@@ -42,6 +57,6 @@ The lookup requires a carrier/locality pair, setting, category, and date. It cur
 - `data/processed/reference.schema.sql`: actual database schema.
 - `data/processed/reference.examples.json`: actual lookup output from `medbill.verify`.
 
-Ingestion uses pandas; runtime lookups use Python's SQLite library. There are no LLM calls and no invented reference amounts. Only public references and their metadata are stored. No upload or patient-data processing exists in this phase.
+Ingestion uses pandas; runtime lookups use Python's SQLite library. There are no LLM calls or invented reference amounts. Persisted artifacts comprise public references, explicitly synthetic bills and their test evidence. There is no upload endpoint or real patient-data processing in this phase.
 
 CMS archives include AMA/ADA copyright notices. The pipeline retains the notices and provenance. Public availability does not establish unrestricted redistribution rights; raw and generated data are ignored by Git. Distribution terms must be addressed before submission packaging.

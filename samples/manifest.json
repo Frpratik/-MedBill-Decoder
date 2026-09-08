@@ -1,0 +1,117 @@
+[
+  {
+    "id": "01_clean",
+    "input": "output/pdf/01_clean.pdf",
+    "synthetic": true,
+    "charges_are_fabricated": true,
+    "expected_rows": [
+      {
+        "service_date": "07/15/2026",
+        "code": "99213",
+        "description": "Office visit - established patient",
+        "quantity": "1",
+        "charged_usd": "250.00"
+      },
+      {
+        "service_date": "07/15/2026",
+        "code": "71046",
+        "description": "Chest X-ray - two views",
+        "quantity": "1",
+        "charged_usd": "180.00"
+      },
+      {
+        "service_date": "07/15/2026",
+        "code": "93000",
+        "description": "Electrocardiogram complete",
+        "quantity": "1",
+        "charged_usd": "135.00"
+      },
+      {
+        "service_date": "07/15/2026",
+        "code": "80053",
+        "description": "Comprehensive metabolic panel",
+        "quantity": "1",
+        "charged_usd": "95.00"
+      }
+    ]
+  },
+  {
+    "id": "02_skewed",
+    "input": "samples/02_skewed.png",
+    "synthetic": true,
+    "charges_are_fabricated": true,
+    "expected_rows": [
+      {
+        "service_date": "07/20/2026",
+        "code": "97110",
+        "description": "Therapeutic exercises",
+        "quantity": "2",
+        "charged_usd": "180.00"
+      },
+      {
+        "service_date": "07/20/2026",
+        "code": "71046-26",
+        "description": "Chest X-ray interpretation",
+        "quantity": "1",
+        "charged_usd": "75.00"
+      },
+      {
+        "service_date": "07/20/2026",
+        "code": "93000",
+        "description": "Electrocardiogram complete",
+        "quantity": "1",
+        "charged_usd": "135.00"
+      },
+      {
+        "service_date": "07/20/2026",
+        "code": "G0008",
+        "description": "Influenza vaccine administration",
+        "quantity": "1",
+        "charged_usd": "40.00"
+      }
+    ]
+  },
+  {
+    "id": "03_degraded",
+    "input": "output/pdf/03_degraded.pdf",
+    "synthetic": true,
+    "charges_are_fabricated": true,
+    "expected_rows": [
+      {
+        "service_date": "08/04/2026",
+        "code": "99214",
+        "description": "Office visit - established patient",
+        "quantity": "1",
+        "charged_usd": "320.00"
+      },
+      {
+        "service_date": "08/04/2026",
+        "code": "J1885",
+        "description": "Injection ketorolac per 15 mg",
+        "quantity": "2",
+        "charged_usd": "60.00"
+      },
+      {
+        "service_date": "08/04/2026",
+        "code": "?????",
+        "description": "Unclear procedure code",
+        "quantity": "1",
+        "charged_usd": "88.00"
+      },
+      {
+        "service_date": "08/04/2026",
+        "code": "80053",
+        "description": "Comprehensive metabolic panel",
+        "quantity": "-",
+        "charged_usd": "95.00"
+      },
+      {
+        "service_date": "08/04/2026",
+        "code": "99213",
+        "description": "Office visit - amount obscured",
+        "quantity": "1",
+        "charged_usd": "????"
+      }
+    ]
+  }
+]

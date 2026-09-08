@@ -1,0 +1,17 @@
+SYNTHETIC REHABILITATION CLINIC
+SYNTHETIC TEST BILL - NOT FOR PAYMENT
+All identities and charges are fabricated for software testing.
+ITEMIZED STATEMENT
+Patient: TEST PERSON 02 Account: SAMPLE-02
+Statement date: 08/15/2026 Currency: USD
+Date Description Code Qty Price Charge
+07/20/2026 Therapeutic exercises 97110 2 $90.00 $180.00
+07/20/2026 Chest X-ray interpretation 71046-26 1 $75.00 $75.00
+07/20/2026 Electrocardiogram complete 93000 1 $135.00 $135.00
+07/20/2026 Influenza vaccine administration G0008 1 $40.00 $40.00
+Total charges: $430.00
+Insurance payments: $0.00
+Patient balance: $430.00
+TEST FIXTURE ONLY. Do not use these amounts as reference prices.
+Contact: no real provider. Payment instructions intentionally omitted. :
+Page 1 of 1

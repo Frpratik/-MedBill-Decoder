@@ -1,0 +1,96 @@
+[
+  {
+    "sample": "01_clean",
+    "input": "output/pdf/01_clean.pdf",
+    "engine_version": "tesseract v5.5.3.20260724",
+    "candidate_rows": 4,
+    "parsed_rows": 4,
+    "review_rows": 0,
+    "expected_rows": 4,
+    "discrepancies": [],
+    "deskew_degrees": [
+      0.0
+    ],
+    "review_reasons": []
+  },
+  {
+    "sample": "02_skewed",
+    "input": "samples/02_skewed.png",
+    "engine_version": "tesseract v5.5.3.20260724",
+    "candidate_rows": 4,
+    "parsed_rows": 2,
+    "review_rows": 2,
+    "expected_rows": 4,
+    "discrepancies": [
+      {
+        "row": 2,
+        "field": "quantity",
+        "expected": "1",
+        "actual": null
+      },
+      {
+        "row": 4,
+        "field": "code",
+        "expected": "G0008",
+        "actual": null
+      },
+      {
+        "row": 4,
+        "field": "modifier",
+        "expected": "",
+        "actual": null
+      }
+    ],
+    "deskew_degrees": [
+      -3.0
+    ],
+    "review_reasons": [
+      {
+        "row": 2,
+        "issues": [
+          "low_confidence_quantity"
+        ]
+      },
+      {
+        "row": 4,
+        "issues": [
+          "low_confidence_code"
+        ]
+      }
+    ]
+  },
+  {
+    "sample": "03_degraded",
+    "input": "output/pdf/03_degraded.pdf",
+    "engine_version": "tesseract v5.5.3.20260724",
+    "candidate_rows": 5,
+    "parsed_rows": 2,
+    "review_rows": 3,
+    "expected_rows": 5,
+    "discrepancies": [],
+    "deskew_degrees": [
+      2.0
+    ],
+    "review_reasons": [
+      {
+        "row": 3,
+        "issues": [
+          "low_confidence_code"
+        ]
+      },
+      {
+        "row": 4,
+        "issues": [
+          "missing_or_ambiguous_quantity",
+          "low_confidence_quantity"
+        ]
+      },
+      {
+        "row": 5,
+        "issues": [
+          "missing_or_ambiguous_charge"
+        ]
+      }
+    ]
+  }
+]

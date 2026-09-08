@@ -1,0 +1,107 @@
+{
+  "sample": "01_clean",
+  "input": "output/pdf/01_clean.pdf",
+  "engine_version": "tesseract v5.5.3.20260724",
+  "candidate_rows": 4,
+  "parsed_rows": 4,
+  "review_rows": 0,
+  "expected_rows": 4,
+  "discrepancies": [],
+  "deskew_degrees": [
+    0.0
+  ],
+  "review_reasons": []
+}
+  99213  | qty=1 | $250.00 | parsed
+  71046  | qty=1 | $180.00 | parsed
+  93000  | qty=1 | $135.00 | parsed
+  80053  | qty=1 | $95.00 | parsed
+{
+  "sample": "02_skewed",
+  "input": "samples/02_skewed.png",
+  "engine_version": "tesseract v5.5.3.20260724",
+  "candidate_rows": 4,
+  "parsed_rows": 2,
+  "review_rows": 2,
+  "expected_rows": 4,
+  "discrepancies": [
+    {
+      "row": 2,
+      "field": "quantity",
+      "expected": "1",
+      "actual": null
+    },
+    {
+      "row": 4,
+      "field": "code",
+      "expected": "G0008",
+      "actual": null
+    },
+    {
+      "row": 4,
+      "field": "modifier",
+      "expected": "",
+      "actual": null
+    }
+  ],
+  "deskew_degrees": [
+    -3.0
+  ],
+  "review_reasons": [
+    {
+      "row": 2,
+      "issues": [
+        "low_confidence_quantity"
+      ]
+    },
+    {
+      "row": 4,
+      "issues": [
+        "low_confidence_code"
+      ]
+    }
+  ]
+}
+  97110  | qty=2 | $180.00 | parsed
+  71046 26 | qty=None | $75.00 | needs_review
+  93000  | qty=1 | $135.00 | parsed
+  None None | qty=1 | $40.00 | needs_review
+{
+  "sample": "03_degraded",
+  "input": "output/pdf/03_degraded.pdf",
+  "engine_version": "tesseract v5.5.3.20260724",
+  "candidate_rows": 5,
+  "parsed_rows": 2,
+  "review_rows": 3,
+  "expected_rows": 5,
+  "discrepancies": [],
+  "deskew_degrees": [
+    2.0
+  ],
+  "review_reasons": [
+    {
+      "row": 3,
+      "issues": [
+        "low_confidence_code"
+      ]
+    },
+    {
+      "row": 4,
+      "issues": [
+        "missing_or_ambiguous_quantity",
+        "low_confidence_quantity"
+      ]
+    },
+    {
+      "row": 5,
+      "issues": [
+        "missing_or_ambiguous_charge"
+      ]
+    }
+  ]
+}
+  99214  | qty=1 | $320.00 | parsed
+  J1885  | qty=2 | $60.00 | parsed
+  None None | qty=1 | $88.00 | needs_review
+  80053  | qty=None | $95.00 | needs_review
+  99213  | qty=1 | $None | needs_review
