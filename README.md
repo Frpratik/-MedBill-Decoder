@@ -1,6 +1,23 @@
 # MedBill Decoder
 
-Phases 1–6: a local CMS reference lookup, real Tesseract/OpenCV OCR and line-item parsing, statistical Medicare benchmark comparisons, local explanations, and a FastAPI upload interface with tested edge-case handling. The approved wording is **amount above Medicare benchmark**. No third-party API or LLM integration is used or required.
+Understand a synthetic medical bill with local OCR, cited Medicare benchmarks, plain-language explanations and questions for the billing office. The app reports **amount above Medicare benchmark**, not confirmed overcharges or recoverable savings. No third-party runtime API, API key or LLM is required.
+
+![Local report from the clean synthetic sample](docs/phase5/clean-desktop.png)
+
+**Synthetic samples only; no real patient information.** The app runs on your computer, not a public hosted service. Submission materials are in the [Devpost draft](docs/DEVPOST_DRAFT.md) and [demo recording script](docs/DEMO_VIDEO_SCRIPT.md).
+
+## What is implemented
+
+| Stage | Actual implementation |
+| --- | --- |
+| OCR | PDFium rasterization, OpenCV preprocessing, local Tesseract text/coordinates/confidence |
+| Parsing | Header geometry, regular expressions, explicit low-confidence review gates |
+| References | pandas ingestion of pinned CMS archives; indexed, read-only SQLite runtime lookup |
+| Comparison | Exact matching, Decimal unit normalization, local rate plus geographic nearest-rank p95 |
+| Explanation | Seven written paraphrases plus a general local-description template; unknown codes stay unknown |
+| Interface | FastAPI and plain HTML/CSS/JavaScript; no external frontend assets or browser storage |
+
+There is no LLM-based feature. The original requested Claude fallback was removed at the project owner's direction. Codex assisted development and documentation; that is separate from the application's runtime behavior.
 
 ## Open the local app
 
@@ -18,19 +35,25 @@ Blank/unreadable images and unpriced codes show **Not calculated**, not a zero-d
 
 ## Setup
 
-Python 3.11 or later:
+Tested on Windows with CPython 3.12.14. Use Python 3.12 and an installed 7-Zip for automated Windows OCR extraction. Other operating systems have not been validated end to end. A fresh clone excludes the CMS archives, generated database, Python environment and Tesseract binaries.
+
+From PowerShell (skip cloning and enter your existing project folder if already downloaded):
 
 ```powershell
-python -m venv .venv
+git clone https://github.com/Frpratik/-MedBill-Decoder.git MedBill-Decoder
+Set-Location MedBill-Decoder
+py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ./scripts/setup_windows_ocr.ps1
+.\.venv\Scripts\python.exe -m medbill.download_sources
 .\.venv\Scripts\python.exe -m medbill.ingest
 .\.venv\Scripts\python.exe -m medbill.verify
 .\.venv\Scripts\python.exe -m medbill.evaluate_ocr
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m medbill.app
 ```
 
-The five downloaded archives must remain in `data/raw`. Exact official URLs and pinned hashes are in `medbill/ingest.py`, and source context is in `docs/PHASE_0_DATA_SOURCES.md`. The build validates every archive's SHA-256 before reading it. Changed releases require review and a deliberate pin update. The build runs offline once dependencies and archives are present. Expect several minutes and several hundred MB for the database and temporary build file.
+The setup-only downloader obtains five archives directly from CMS and verifies their pinned SHA-256 hashes. Existing matching files are reused; mismatches fail without replacing them. Use `python -m medbill.download_sources --check-only` to verify local archives without network access. Exact hashes are in `medbill/ingest.py`. Changed releases require review and a deliberate pin update. Initial setup needs internet access; the runtime works offline after dependencies, English OCR data and references are installed. The generated database is approximately 208 MB, with additional space needed for archives and the temporary build file. Ingestion can take several minutes.
 
 The Windows OCR setup uses an existing 7-Zip installation to extract the pinned Tesseract release locally and downloads the official English model. Both downloads are checksum-verified. It does not run the installer or change system PATH. Alternatively, install Tesseract using the [official instructions](https://tesseract-ocr.github.io/tessdoc/Installation.html), with English traineddata, and set `TESSERACT_CMD` if the executable is not on PATH.
 
@@ -91,4 +114,41 @@ Seven code-specific paraphrases and a general CMS-description template explain k
 
 Ingestion uses pandas; runtime lookups use Python's SQLite library. There are no LLM calls or invented reference amounts. Persisted project artifacts comprise public references, explicitly synthetic bills and their test evidence. The upload endpoint is restricted to synthetic sample use and does not persist its input or output.
 
-CMS archives include AMA/ADA copyright notices. The pipeline retains the notices and provenance. Public availability does not establish unrestricted redistribution rights; raw and generated data are ignored by Git. Distribution terms must be addressed before submission packaging.
+CMS archives include AMA/ADA copyright notices. The pipeline retains the notices and provenance. The source package excludes full reference archives, the generated database and installed dependencies. It retains small source excerpts and synthetic evaluation evidence. See [third-party notices](NOTICE.md); public access is not unrestricted redistribution permission.
+
+## Data sources
+
+| Source release | Official archive |
+| --- | --- |
+| Annual 2026 payment baseline | [CMS annual PFS](https://www.cms.gov/files/zip/pfrev26a-updated-12-29-2025.zip) |
+| April payment revision | [CMS April PFS](https://www.cms.gov/files/zip/pfrev26b-updated-03-10-2026.zip) |
+| July payment revision | [CMS July PFS](https://www.cms.gov/files/zip/pfrev26c-posted-06-30-2026.zip) |
+| July relative values and short descriptions | [CMS RVU](https://www.cms.gov/files/zip/rvu26c-updated-06-30-2026.zip) |
+| July HCPCS Level II descriptions | [CMS HCPCS](https://www.cms.gov/files/zip/july-2026-alpha-numeric-hcpcs-file.zip) |
+
+The cleaned snapshot contains 2,075,578 payment rows, 19,356 code/modifier descriptions and 109 locality pairs. QP and non-QP are separate; setting amounts share each payment row. Source counts are not a count of distinct services. See [Phase 1 provenance and gaps](docs/PHASE_1_REFERENCE_PIPELINE.md) and [synthetic bill format credits](samples/README.md).
+
+## Measured demonstration results
+
+| Synthetic sample | Compared / candidate rows | Amount above Medicare benchmark |
+| --- | ---: | ---: |
+| Clean | 3 / 4 | $384.44 |
+| Skewed | 2 / 4 | $223.96 |
+| Degraded | 1 / 5 | $153.60 |
+
+Five rows require OCR review; two accepted rows lack matching PFS prices. Eight rows use local explanations (61.54% of 13 candidate rows, or 100% of accepted readings). All charges are fabricated test inputs. This is not a general OCR accuracy, overcharge-detection or template-coverage estimate.
+
+## Troubleshooting and verification
+
+- **Reference file missing:** run `medbill.download_sources`, then `medbill.ingest`. Do not edit hashes to accept an unexpected download.
+- **Tesseract not found:** run the OCR setup script or set `TESSERACT_CMD` to an installed Tesseract executable with English traineddata.
+- **PowerShell blocks the setup script:** follow your machine's execution policy or use the manual Tesseract setup path; no system-policy change is required by the app.
+- **Port 8000 is busy:** stop the other app using that port, or use `python -m uvicorn medbill.app:app --host 127.0.0.1 --port 8001 --no-access-log`. Live evaluators assume port 8000.
+- **Unsupported dates or no matching rate:** these are data limits, not prices to fill in. Inspect the row's details.
+- **HTTP 429:** another sample is processing. Retry after it finishes; use one server process.
+
+`python -m medbill.audit_persistence` reproduces the scoped audit. It observed no Python file mutations/network connects or retained scratch files in eight cases; native child-process syscalls and OS paging were not traced. See [Phase 6 evidence](docs/PHASE_6_DEMO_POLISH.md). A Starlette test-client deprecation notice is currently emitted; it does not prevent the tests from passing.
+
+## Submission package
+
+See [Phase 7 handoff](docs/PHASE_7_SUBMISSION.md) for the source archive contents, validation and remaining manual submission steps. The project does not implement accounts, persistent bill storage, insurance claims, coverage determinations, real-patient workflows or recoverable-savings estimates.

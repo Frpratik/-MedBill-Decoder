@@ -5,3 +5,4 @@ data/processed/
 .tools/
 tmp/
 docs/source-previews/
+dist/
