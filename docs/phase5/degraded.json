@@ -1,0 +1,1009 @@
+{
+  "context": {
+    "carrier": "01112",
+    "locality": "05",
+    "setting": "nonfacility",
+    "category": "nonQP"
+  },
+  "items": [
+    {
+      "code": "99214",
+      "modifier": "",
+      "service_date": "2026-08-04",
+      "description": "Office visit - established patient",
+      "quantity": "1",
+      "charged_cents": 32000,
+      "page": 1,
+      "line_index": 7,
+      "flag": true,
+      "amount_above_benchmark_usd": "153.60",
+      "reference": {
+        "code": "99214",
+        "modifier": "",
+        "carrier": "01112",
+        "locality": "05",
+        "setting": "nonfacility",
+        "category": "nonQP",
+        "service_date": "2026-08-04",
+        "benchmark_usd": "166.40",
+        "description": "Office o/p est mod 30 min",
+        "warnings": [
+          "Medicare benchmark only; not patient responsibility or proof of an overcharge."
+        ],
+        "description_source_id": "rvu_nonQP",
+        "source": {
+          "id": "annual_nonQP",
+          "url": "https://www.cms.gov/files/zip/pfrev26a-updated-12-29-2025.zip",
+          "archive": "pfrev26a-updated-12-29-2025.zip",
+          "sha256": "CE670F78702767644A7D1A5888B6FD3FD9AB8EA9947C2C8192841B0091CEC867",
+          "member": "PFREV26A /PFREV26AR_nonQP.zip!PFALL26AR.txt",
+          "release": "annual",
+          "retrieved_date": "2026-09-08",
+          "copyright_notice": "TRL- CPT CODES AND DESCRIPTIONS ONLY ARE COPYRIGHT 2026 AMERICAN MEDICAL ASSOCIATION. \nTRL- ALL RIGHTS RESERVED. APPLICABLE FARS/DFARS APPLY.\nTRL- THE FOLLOWING STATEMENT APPLIES TO ALL DENTAL CODES (HCPCS START WITH LETTER D): \nTRL- COPYRIGHT 2026 AMERICAN DENTAL ASSOCIATION. ALL RIGHTS RESERVED."
+        },
+        "source_row": 968953,
+        "status": "A",
+        "published_amount_usd": "166.40",
+        "policy_indicators": {
+          "pctc": "0",
+          "multiple_surgery": "0",
+          "opps_indicator": "9"
+        },
+        "availability": "published_benchmark"
+      },
+      "availability": "compared",
+      "unit_charge_usd": "320.00",
+      "unit_benchmark_usd": "166.40",
+      "line_benchmark_usd": "166.40",
+      "charge_to_local_benchmark_ratio": "1.9231",
+      "decision_rule": "unit charge exceeds BOTH the matched local rate and geographic p95",
+      "statistics": {
+        "n": 109,
+        "minimum_n": 20,
+        "p95_method": "nearest_rank",
+        "flag": true,
+        "percentile_rank": "100.00",
+        "p95_usd": "158.59",
+        "availability": "available",
+        "min_usd": "123.92",
+        "max_usd": "170.02",
+        "flag_rule": "unit charge strictly greater than nearest-rank p95",
+        "meaning": "Percentile among Medicare locality rates, not commercial charges or error probability."
+      },
+      "cohort": {
+        "members": [
+          {
+            "carrier": "01112",
+            "locality": "05",
+            "benchmark_cents": 16640,
+            "source_id": "annual_nonQP",
+            "source_row": 968953
+          },
+          {
+            "carrier": "01112",
+            "locality": "09",
+            "benchmark_cents": 16937,
+            "source_id": "annual_nonQP",
+            "source_row": 968954
+          },
+          {
+            "carrier": "01112",
+            "locality": "51",
+            "benchmark_cents": 15859,
+            "source_id": "annual_nonQP",
+            "source_row": 968955
+          },
+          {
+            "carrier": "01112",
+            "locality": "52",
+            "benchmark_cents": 16656,
+            "source_id": "annual_nonQP",
+            "source_row": 968956
+          },
+          {
+            "carrier": "01112",
+            "locality": "53",
+            "benchmark_cents": 15836,
+            "source_id": "annual_nonQP",
+            "source_row": 968957
+          },
+          {
+            "carrier": "01112",
+            "locality": "54",
+            "benchmark_cents": 14141,
+            "source_id": "annual_nonQP",
+            "source_row": 968958
+          },
+          {
+            "carrier": "01112",
+            "locality": "55",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968959
+          },
+          {
+            "carrier": "01112",
+            "locality": "56",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968960
+          },
+          {
+            "carrier": "01112",
+            "locality": "57",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968961
+          },
+          {
+            "carrier": "01112",
+            "locality": "58",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968962
+          },
+          {
+            "carrier": "01112",
+            "locality": "59",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968963
+          },
+          {
+            "carrier": "01112",
+            "locality": "60",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968964
+          },
+          {
+            "carrier": "01112",
+            "locality": "61",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968965
+          },
+          {
+            "carrier": "01112",
+            "locality": "62",
+            "benchmark_cents": 14249,
+            "source_id": "annual_nonQP",
+            "source_row": 968966
+          },
+          {
+            "carrier": "01112",
+            "locality": "63",
+            "benchmark_cents": 14664,
+            "source_id": "annual_nonQP",
+            "source_row": 968967
+          },
+          {
+            "carrier": "01112",
+            "locality": "64",
+            "benchmark_cents": 14605,
+            "source_id": "annual_nonQP",
+            "source_row": 968968
+          },
+          {
+            "carrier": "01112",
+            "locality": "65",
+            "benchmark_cents": 17002,
+            "source_id": "annual_nonQP",
+            "source_row": 968969
+          },
+          {
+            "carrier": "01112",
+            "locality": "66",
+            "benchmark_cents": 14915,
+            "source_id": "annual_nonQP",
+            "source_row": 968970
+          },
+          {
+            "carrier": "01112",
+            "locality": "67",
+            "benchmark_cents": 15059,
+            "source_id": "annual_nonQP",
+            "source_row": 968971
+          },
+          {
+            "carrier": "01112",
+            "locality": "68",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968972
+          },
+          {
+            "carrier": "01112",
+            "locality": "69",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968973
+          },
+          {
+            "carrier": "01112",
+            "locality": "70",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968974
+          },
+          {
+            "carrier": "01112",
+            "locality": "75",
+            "benchmark_cents": 14094,
+            "source_id": "annual_nonQP",
+            "source_row": 968975
+          },
+          {
+            "carrier": "01182",
+            "locality": "17",
+            "benchmark_cents": 14780,
+            "source_id": "annual_nonQP",
+            "source_row": 968976
+          },
+          {
+            "carrier": "01182",
+            "locality": "18",
+            "benchmark_cents": 14889,
+            "source_id": "annual_nonQP",
+            "source_row": 968977
+          },
+          {
+            "carrier": "01182",
+            "locality": "71",
+            "benchmark_cents": 14096,
+            "source_id": "annual_nonQP",
+            "source_row": 968978
+          },
+          {
+            "carrier": "01182",
+            "locality": "72",
+            "benchmark_cents": 14848,
+            "source_id": "annual_nonQP",
+            "source_row": 968979
+          },
+          {
+            "carrier": "01182",
+            "locality": "73",
+            "benchmark_cents": 14381,
+            "source_id": "annual_nonQP",
+            "source_row": 968980
+          },
+          {
+            "carrier": "01182",
+            "locality": "74",
+            "benchmark_cents": 14632,
+            "source_id": "annual_nonQP",
+            "source_row": 968981
+          },
+          {
+            "carrier": "01212",
+            "locality": "01",
+            "benchmark_cents": 14279,
+            "source_id": "annual_nonQP",
+            "source_row": 968982
+          },
+          {
+            "carrier": "01312",
+            "locality": "00",
+            "benchmark_cents": 13489,
+            "source_id": "annual_nonQP",
+            "source_row": 968983
+          },
+          {
+            "carrier": "02102",
+            "locality": "01",
+            "benchmark_cents": 16992,
+            "source_id": "annual_nonQP",
+            "source_row": 968984
+          },
+          {
+            "carrier": "02202",
+            "locality": "00",
+            "benchmark_cents": 12780,
+            "source_id": "annual_nonQP",
+            "source_row": 968985
+          },
+          {
+            "carrier": "02302",
+            "locality": "01",
+            "benchmark_cents": 14285,
+            "source_id": "annual_nonQP",
+            "source_row": 968986
+          },
+          {
+            "carrier": "02302",
+            "locality": "99",
+            "benchmark_cents": 13395,
+            "source_id": "annual_nonQP",
+            "source_row": 968987
+          },
+          {
+            "carrier": "02402",
+            "locality": "02",
+            "benchmark_cents": 15312,
+            "source_id": "annual_nonQP",
+            "source_row": 968988
+          },
+          {
+            "carrier": "02402",
+            "locality": "99",
+            "benchmark_cents": 13886,
+            "source_id": "annual_nonQP",
+            "source_row": 968989
+          },
+          {
+            "carrier": "03102",
+            "locality": "00",
+            "benchmark_cents": 13286,
+            "source_id": "annual_nonQP",
+            "source_row": 968990
+          },
+          {
+            "carrier": "03202",
+            "locality": "01",
+            "benchmark_cents": 13560,
+            "source_id": "annual_nonQP",
+            "source_row": 968991
+          },
+          {
+            "carrier": "03302",
+            "locality": "01",
+            "benchmark_cents": 13283,
+            "source_id": "annual_nonQP",
+            "source_row": 968992
+          },
+          {
+            "carrier": "03402",
+            "locality": "02",
+            "benchmark_cents": 13250,
+            "source_id": "annual_nonQP",
+            "source_row": 968993
+          },
+          {
+            "carrier": "03502",
+            "locality": "09",
+            "benchmark_cents": 13112,
+            "source_id": "annual_nonQP",
+            "source_row": 968994
+          },
+          {
+            "carrier": "03602",
+            "locality": "21",
+            "benchmark_cents": 13439,
+            "source_id": "annual_nonQP",
+            "source_row": 968995
+          },
+          {
+            "carrier": "04112",
+            "locality": "01",
+            "benchmark_cents": 13963,
+            "source_id": "annual_nonQP",
+            "source_row": 968996
+          },
+          {
+            "carrier": "04212",
+            "locality": "05",
+            "benchmark_cents": 13100,
+            "source_id": "annual_nonQP",
+            "source_row": 968997
+          },
+          {
+            "carrier": "04312",
+            "locality": "00",
+            "benchmark_cents": 12742,
+            "source_id": "annual_nonQP",
+            "source_row": 968998
+          },
+          {
+            "carrier": "04412",
+            "locality": "09",
+            "benchmark_cents": 13449,
+            "source_id": "annual_nonQP",
+            "source_row": 968999
+          },
+          {
+            "carrier": "04412",
+            "locality": "11",
+            "benchmark_cents": 13525,
+            "source_id": "annual_nonQP",
+            "source_row": 969000
+          },
+          {
+            "carrier": "04412",
+            "locality": "15",
+            "benchmark_cents": 13485,
+            "source_id": "annual_nonQP",
+            "source_row": 969001
+          },
+          {
+            "carrier": "04412",
+            "locality": "18",
+            "benchmark_cents": 13741,
+            "source_id": "annual_nonQP",
+            "source_row": 969002
+          },
+          {
+            "carrier": "04412",
+            "locality": "20",
+            "benchmark_cents": 12926,
+            "source_id": "annual_nonQP",
+            "source_row": 969003
+          },
+          {
+            "carrier": "04412",
+            "locality": "28",
+            "benchmark_cents": 13465,
+            "source_id": "annual_nonQP",
+            "source_row": 969004
+          },
+          {
+            "carrier": "04412",
+            "locality": "31",
+            "benchmark_cents": 13908,
+            "source_id": "annual_nonQP",
+            "source_row": 969005
+          },
+          {
+            "carrier": "04412",
+            "locality": "99",
+            "benchmark_cents": 13175,
+            "source_id": "annual_nonQP",
+            "source_row": 969006
+          },
+          {
+            "carrier": "05102",
+            "locality": "00",
+            "benchmark_cents": 12711,
+            "source_id": "annual_nonQP",
+            "source_row": 969007
+          },
+          {
+            "carrier": "05202",
+            "locality": "00",
+            "benchmark_cents": 12688,
+            "source_id": "annual_nonQP",
+            "source_row": 969008
+          },
+          {
+            "carrier": "05302",
+            "locality": "01",
+            "benchmark_cents": 13241,
+            "source_id": "annual_nonQP",
+            "source_row": 969009
+          },
+          {
+            "carrier": "05302",
+            "locality": "02",
+            "benchmark_cents": 13143,
+            "source_id": "annual_nonQP",
+            "source_row": 969010
+          },
+          {
+            "carrier": "05302",
+            "locality": "99",
+            "benchmark_cents": 12627,
+            "source_id": "annual_nonQP",
+            "source_row": 969011
+          },
+          {
+            "carrier": "05402",
+            "locality": "00",
+            "benchmark_cents": 12756,
+            "source_id": "annual_nonQP",
+            "source_row": 969012
+          },
+          {
+            "carrier": "06102",
+            "locality": "12",
+            "benchmark_cents": 13501,
+            "source_id": "annual_nonQP",
+            "source_row": 969013
+          },
+          {
+            "carrier": "06102",
+            "locality": "15",
+            "benchmark_cents": 14147,
+            "source_id": "annual_nonQP",
+            "source_row": 969014
+          },
+          {
+            "carrier": "06102",
+            "locality": "16",
+            "benchmark_cents": 14245,
+            "source_id": "annual_nonQP",
+            "source_row": 969015
+          },
+          {
+            "carrier": "06102",
+            "locality": "99",
+            "benchmark_cents": 13243,
+            "source_id": "annual_nonQP",
+            "source_row": 969016
+          },
+          {
+            "carrier": "06202",
+            "locality": "00",
+            "benchmark_cents": 13425,
+            "source_id": "annual_nonQP",
+            "source_row": 969017
+          },
+          {
+            "carrier": "06302",
+            "locality": "00",
+            "benchmark_cents": 12957,
+            "source_id": "annual_nonQP",
+            "source_row": 969018
+          },
+          {
+            "carrier": "07102",
+            "locality": "13",
+            "benchmark_cents": 12392,
+            "source_id": "annual_nonQP",
+            "source_row": 969019
+          },
+          {
+            "carrier": "07202",
+            "locality": "01",
+            "benchmark_cents": 13230,
+            "source_id": "annual_nonQP",
+            "source_row": 969020
+          },
+          {
+            "carrier": "07202",
+            "locality": "99",
+            "benchmark_cents": 12773,
+            "source_id": "annual_nonQP",
+            "source_row": 969021
+          },
+          {
+            "carrier": "07302",
+            "locality": "00",
+            "benchmark_cents": 12510,
+            "source_id": "annual_nonQP",
+            "source_row": 969022
+          },
+          {
+            "carrier": "08102",
+            "locality": "00",
+            "benchmark_cents": 12833,
+            "source_id": "annual_nonQP",
+            "source_row": 969023
+          },
+          {
+            "carrier": "08202",
+            "locality": "01",
+            "benchmark_cents": 13648,
+            "source_id": "annual_nonQP",
+            "source_row": 969024
+          },
+          {
+            "carrier": "08202",
+            "locality": "99",
+            "benchmark_cents": 13040,
+            "source_id": "annual_nonQP",
+            "source_row": 969025
+          },
+          {
+            "carrier": "09102",
+            "locality": "03",
+            "benchmark_cents": 14025,
+            "source_id": "annual_nonQP",
+            "source_row": 969026
+          },
+          {
+            "carrier": "09102",
+            "locality": "04",
+            "benchmark_cents": 14550,
+            "source_id": "annual_nonQP",
+            "source_row": 969027
+          },
+          {
+            "carrier": "09102",
+            "locality": "99",
+            "benchmark_cents": 13502,
+            "source_id": "annual_nonQP",
+            "source_row": 969028
+          },
+          {
+            "carrier": "09202",
+            "locality": "20",
+            "benchmark_cents": 13627,
+            "source_id": "annual_nonQP",
+            "source_row": 969029
+          },
+          {
+            "carrier": "09202",
+            "locality": "50",
+            "benchmark_cents": 13627,
+            "source_id": "annual_nonQP",
+            "source_row": 969030
+          },
+          {
+            "carrier": "10112",
+            "locality": "00",
+            "benchmark_cents": 12523,
+            "source_id": "annual_nonQP",
+            "source_row": 969031
+          },
+          {
+            "carrier": "10212",
+            "locality": "01",
+            "benchmark_cents": 13781,
+            "source_id": "annual_nonQP",
+            "source_row": 969032
+          },
+          {
+            "carrier": "10212",
+            "locality": "99",
+            "benchmark_cents": 12929,
+            "source_id": "annual_nonQP",
+            "source_row": 969033
+          },
+          {
+            "carrier": "10312",
+            "locality": "35",
+            "benchmark_cents": 12736,
+            "source_id": "annual_nonQP",
+            "source_row": 969034
+          },
+          {
+            "carrier": "11202",
+            "locality": "01",
+            "benchmark_cents": 12983,
+            "source_id": "annual_nonQP",
+            "source_row": 969035
+          },
+          {
+            "carrier": "11302",
+            "locality": "00",
+            "benchmark_cents": 13310,
+            "source_id": "annual_nonQP",
+            "source_row": 969036
+          },
+          {
+            "carrier": "11402",
+            "locality": "16",
+            "benchmark_cents": 12887,
+            "source_id": "annual_nonQP",
+            "source_row": 969037
+          },
+          {
+            "carrier": "11502",
+            "locality": "00",
+            "benchmark_cents": 12944,
+            "source_id": "annual_nonQP",
+            "source_row": 969038
+          },
+          {
+            "carrier": "12102",
+            "locality": "01",
+            "benchmark_cents": 13465,
+            "source_id": "annual_nonQP",
+            "source_row": 969039
+          },
+          {
+            "carrier": "12202",
+            "locality": "01",
+            "benchmark_cents": 15149,
+            "source_id": "annual_nonQP",
+            "source_row": 969040
+          },
+          {
+            "carrier": "12302",
+            "locality": "01",
+            "benchmark_cents": 14262,
+            "source_id": "annual_nonQP",
+            "source_row": 969041
+          },
+          {
+            "carrier": "12302",
+            "locality": "99",
+            "benchmark_cents": 13667,
+            "source_id": "annual_nonQP",
+            "source_row": 969042
+          },
+          {
+            "carrier": "12402",
+            "locality": "01",
+            "benchmark_cents": 15065,
+            "source_id": "annual_nonQP",
+            "source_row": 969043
+          },
+          {
+            "carrier": "12402",
+            "locality": "99",
+            "benchmark_cents": 14477,
+            "source_id": "annual_nonQP",
+            "source_row": 969044
+          },
+          {
+            "carrier": "12502",
+            "locality": "01",
+            "benchmark_cents": 14040,
+            "source_id": "annual_nonQP",
+            "source_row": 969045
+          },
+          {
+            "carrier": "12502",
+            "locality": "99",
+            "benchmark_cents": 12987,
+            "source_id": "annual_nonQP",
+            "source_row": 969046
+          },
+          {
+            "carrier": "13102",
+            "locality": "00",
+            "benchmark_cents": 14302,
+            "source_id": "annual_nonQP",
+            "source_row": 969047
+          },
+          {
+            "carrier": "13202",
+            "locality": "01",
+            "benchmark_cents": 15327,
+            "source_id": "annual_nonQP",
+            "source_row": 969048
+          },
+          {
+            "carrier": "13202",
+            "locality": "02",
+            "benchmark_cents": 15634,
+            "source_id": "annual_nonQP",
+            "source_row": 969049
+          },
+          {
+            "carrier": "13202",
+            "locality": "03",
+            "benchmark_cents": 14582,
+            "source_id": "annual_nonQP",
+            "source_row": 969050
+          },
+          {
+            "carrier": "13282",
+            "locality": "99",
+            "benchmark_cents": 13088,
+            "source_id": "annual_nonQP",
+            "source_row": 969051
+          },
+          {
+            "carrier": "13292",
+            "locality": "04",
+            "benchmark_cents": 15394,
+            "source_id": "annual_nonQP",
+            "source_row": 969052
+          },
+          {
+            "carrier": "14112",
+            "locality": "03",
+            "benchmark_cents": 13328,
+            "source_id": "annual_nonQP",
+            "source_row": 969053
+          },
+          {
+            "carrier": "14112",
+            "locality": "99",
+            "benchmark_cents": 12850,
+            "source_id": "annual_nonQP",
+            "source_row": 969054
+          },
+          {
+            "carrier": "14212",
+            "locality": "01",
+            "benchmark_cents": 15068,
+            "source_id": "annual_nonQP",
+            "source_row": 969055
+          },
+          {
+            "carrier": "14212",
+            "locality": "99",
+            "benchmark_cents": 13922,
+            "source_id": "annual_nonQP",
+            "source_row": 969056
+          },
+          {
+            "carrier": "14312",
+            "locality": "40",
+            "benchmark_cents": 13776,
+            "source_id": "annual_nonQP",
+            "source_row": 969057
+          },
+          {
+            "carrier": "14412",
+            "locality": "01",
+            "benchmark_cents": 13853,
+            "source_id": "annual_nonQP",
+            "source_row": 969058
+          },
+          {
+            "carrier": "14512",
+            "locality": "50",
+            "benchmark_cents": 13263,
+            "source_id": "annual_nonQP",
+            "source_row": 969059
+          },
+          {
+            "carrier": "15102",
+            "locality": "00",
+            "benchmark_cents": 12780,
+            "source_id": "annual_nonQP",
+            "source_row": 969060
+          },
+          {
+            "carrier": "15202",
+            "locality": "00",
+            "benchmark_cents": 12983,
+            "source_id": "annual_nonQP",
+            "source_row": 969061
+          }
+        ],
+        "excluded": {},
+        "sources": {
+          "annual_nonQP": {
+            "id": "annual_nonQP",
+            "url": "https://www.cms.gov/files/zip/pfrev26a-updated-12-29-2025.zip",
+            "archive": "pfrev26a-updated-12-29-2025.zip",
+            "sha256": "CE670F78702767644A7D1A5888B6FD3FD9AB8EA9947C2C8192841B0091CEC867",
+            "member": "PFREV26A /PFREV26AR_nonQP.zip!PFALL26AR.txt",
+            "release": "annual",
+            "retrieved_date": "2026-09-08",
+            "copyright_notice": "TRL- CPT CODES AND DESCRIPTIONS ONLY ARE COPYRIGHT 2026 AMERICAN MEDICAL ASSOCIATION. \nTRL- ALL RIGHTS RESERVED. APPLICABLE FARS/DFARS APPLY.\nTRL- THE FOLLOWING STATEMENT APPLIES TO ALL DENTAL CODES (HCPCS START WITH LETTER D): \nTRL- COPYRIGHT 2026 AMERICAN DENTAL ASSOCIATION. ALL RIGHTS RESERVED."
+          }
+        },
+        "definition": {
+          "code": "99214",
+          "modifier": "",
+          "service_date": "2026-08-04",
+          "setting": "nonfacility",
+          "category": "nonQP",
+          "status": "A",
+          "weighting": "one equal-weight observation per carrier/locality"
+        }
+      },
+      "warnings": [
+        "Medicare benchmark only; not patient responsibility or proof of an overcharge.",
+        "Quantity times the full single-service rate; claim-specific reductions are not calculated.",
+        "A flag identifies a Medicare benchmark difference to investigate, not an overcharge."
+      ],
+      "explanation_result": {
+        "method": "template",
+        "explanation": "An office or outpatient visit with an established patient.",
+        "official_description": "Office o/p est mod 30 min",
+        "description_source_id": "rvu_nonQP",
+        "question": "Why does this unit charge exceed both the local Medicare rate and the geographic 95th percentile?",
+        "benchmark_explanation": "The charge per unit is $320.00; the matched Medicare rate is $166.40. The positive line difference is $153.60. This is not proof of an overcharge or savings."
+      }
+    },
+    {
+      "code": "J1885",
+      "modifier": "",
+      "service_date": "2026-08-04",
+      "description": "Injection ketorolac per 15 mg",
+      "quantity": "2",
+      "charged_cents": 6000,
+      "page": 1,
+      "line_index": 8,
+      "flag": null,
+      "amount_above_benchmark_usd": null,
+      "reference": {
+        "code": "J1885",
+        "modifier": "",
+        "carrier": "01112",
+        "locality": "05",
+        "setting": "nonfacility",
+        "category": "nonQP",
+        "service_date": "2026-08-04",
+        "benchmark_usd": null,
+        "description": "Ketorolac tromethamine inj",
+        "warnings": [],
+        "description_source_id": "rvu_nonQP",
+        "long_description": "Injection, ketorolac tromethamine, per 15 mg",
+        "hcpcs_source_id": "hcpcs",
+        "availability": "no_matching_rate"
+      },
+      "availability": "no_matching_rate",
+      "explanation_result": {
+        "method": "template",
+        "explanation": "An injection of ketorolac tromethamine; the code describes each 15 mg billing unit.",
+        "official_description": "Injection, ketorolac tromethamine, per 15 mg",
+        "description_source_id": "hcpcs",
+        "question": "Can you explain what this service and its billed units include?",
+        "benchmark_explanation": "No usable price comparison is available for this line; no difference is estimated."
+      }
+    },
+    {
+      "code": null,
+      "modifier": null,
+      "service_date": "2026-08-04",
+      "description": "Unclear procedure code",
+      "quantity": "1",
+      "charged_cents": 8800,
+      "page": 1,
+      "line_index": 9,
+      "flag": null,
+      "amount_above_benchmark_usd": null,
+      "availability": "ocr_review_required",
+      "issues": [
+        "low_confidence_code"
+      ],
+      "explanation_result": {
+        "method": "review_required",
+        "explanation": "This line needs a clearer image or a corrected reading before it can be explained.",
+        "question": "Can you provide a clear itemized copy showing the code, units and charge?"
+      }
+    },
+    {
+      "code": "80053",
+      "modifier": "",
+      "service_date": "2026-08-04",
+      "description": "Comprehensive metabolic panel",
+      "quantity": null,
+      "charged_cents": 9500,
+      "page": 1,
+      "line_index": 10,
+      "flag": null,
+      "amount_above_benchmark_usd": null,
+      "availability": "ocr_review_required",
+      "issues": [
+        "missing_or_ambiguous_quantity",
+        "low_confidence_quantity"
+      ],
+      "explanation_result": {
+        "method": "review_required",
+        "explanation": "This line needs a clearer image or a corrected reading before it can be explained.",
+        "question": "Can you provide a clear itemized copy showing the code, units and charge?"
+      }
+    },
+    {
+      "code": "99213",
+      "modifier": "",
+      "service_date": "2026-08-04",
+      "description": "Office visit - amount obscured",
+      "quantity": "1",
+      "charged_cents": null,
+      "page": 1,
+      "line_index": 11,
+      "flag": null,
+      "amount_above_benchmark_usd": null,
+      "availability": "ocr_review_required",
+      "issues": [
+        "missing_or_ambiguous_charge"
+      ],
+      "explanation_result": {
+        "method": "review_required",
+        "explanation": "This line needs a clearer image or a corrected reading before it can be explained.",
+        "question": "Can you provide a clear itemized copy showing the code, units and charge?"
+      }
+    }
+  ],
+  "summary": {
+    "candidate_rows": 5,
+    "compared_rows": 1,
+    "excluded_rows": 4,
+    "flagged_rows": 1,
+    "excluded_reasons": {
+      "no_matching_rate": 1,
+      "ocr_review_required": 3
+    },
+    "amount_above_medicare_benchmark_usd": "153.60",
+    "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.",
+    "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."
+  },
+  "explanation_summary": {
+    "total_rows": 5,
+    "counts": {
+      "template": 2,
+      "review_required": 3
+    },
+    "percent_of_all_rows": {
+      "template": 40.0,
+      "review_required": 60.0,
+      "unknown_code": 0.0
+    }
+  },
+  "ocr": {
+    "engine": "Tesseract",
+    "page_count": 1,
+    "candidate_rows": 5
+  },
+  "notice": "Synthetic samples only. Processing is local. Uploads and reports are not saved by the app."
+}

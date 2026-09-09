@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MedBill Decoder · Understand your bill</title>
+<meta name="description" content="A local tool for understanding synthetic medical bills using Medicare reference rates.">
+<link rel="stylesheet" href="/static/style.css"><script defer src="/static/app.js"></script></head>
+<body>
+<header><a class="brand" href="/" aria-label="MedBill Decoder home"><span class="mark">M<span>+</span></span>MedBill <strong>Decoder</strong></a><span class="local"><span aria-hidden="true">●</span> Runs on your computer</span></header>
+<main>
+<section class="intro"><p class="eyebrow">BILL CLARITY, LINE BY LINE</p><h1>Make sense of the charges.</h1><p>Read what each service means and compare its charge with a Medicare benchmark.</p></section>
+<div class="workspace">
+<aside class="panel upload-panel"><div class="step">01 <span>Your sample bill</span></div>
+<form id="upload-form">
+<label class="file-box" for="bill"><span class="upload-icon" aria-hidden="true">↑</span><strong>Choose a PDF or image</strong><span>Up to 20 MiB · PDF up to 10 pages</span><input id="bill" type="file" accept=".pdf,.png,.jpg,.jpeg,.tif,.tiff,.bmp,.webp" aria-describedby="file-label"></label>
+<p id="file-label" class="muted">No file selected</p>
+<label class="consent"><input type="checkbox" id="synthetic" required><span>This is a synthetic sample bill, with no real patient information.</span></label>
+<details class="settings" open><summary>Medicare comparison settings</summary>
+<label for="locality">Reference area</label><select id="locality" required><option value="">Loading reference areas…</option></select>
+<p class="hint">Sample default: San Francisco (01112 / 05). Other areas use CMS carrier / locality IDs.</p>
+<label for="setting">Where the physician service was provided</label><select id="setting"><option value="nonfacility">Office / nonfacility</option><option value="facility">Facility (physician fee only)</option></select>
+<label for="category">Medicare payment category</label><select id="category"><option value="nonQP">Standard (non-QP)</option><option value="QP">Qualifying APM participant (QP)</option></select>
+<p class="hint">Reference dates: July–September 2026. The service date is read from the bill.</p></details>
+<button id="decode" type="submit" class="primary">Decode sample bill <span aria-hidden="true">→</span></button>
+</form>
+<div class="samples"><p class="eyebrow">OR TRY A SYNTHETIC SAMPLE</p><div class="sample-buttons"><button type="button" data-sample="clean">Clean PDF</button><button type="button" data-sample="skewed">Skewed image</button><button type="button" data-sample="degraded">Degraded PDF</button></div><p class="hint">Each sample runs through the full local pipeline.</p></div>
+<p class="privacy">Your upload stays in memory during processing. The app does not save it or send it to an external service.</p>
+</aside>
+<section id="results" class="results-panel" aria-labelledby="report-title"><div class="report-heading"><div class="step">02 <span id="report-title">Your decoded report</span></div><button id="clear" class="quiet" hidden>Clear report</button></div>
+<div id="status" role="status" aria-live="polite"></div><div id="error" role="alert" hidden></div>
+<div id="empty" class="empty"><div class="paper" aria-hidden="true"><span>MEDICAL BILL</span><i></i><i></i><i></i><b>?</b></div><h2>A clearer view starts here.</h2><p>Choose a sample bill to see plain-language explanations, reference amounts, and items that need a closer look.</p><div class="legend"><span>Service explained</span><span>Charge compared</span><span>Questions to ask</span></div></div>
+<div id="report" hidden><p id="report-context" class="muted"></p><div class="metrics"><div class="metric main-metric"><span>Amount above Medicare benchmark</span><strong id="difference"></strong><small>Compared rows only · Not confirmed savings</small></div><div class="metric"><span>Compared</span><strong id="compared"></strong></div><div class="metric"><span>Need review / unpriced</span><strong id="excluded"></strong></div></div>
+<p class="notice">Medicare rates are reference points, not commercial prices or what you owe. A flag means the unit charge exceeds both the local rate and the geographic 95th percentile.</p>
+<div class="table-wrap" tabindex="0" aria-label="Bill line items; scroll horizontally on small screens"><table><caption class="sr-only">Extracted services and Medicare comparison</caption><thead><tr><th scope="col">Service / explanation</th><th scope="col">Units</th><th scope="col">Line charge</th><th scope="col">Medicare / unit</th><th scope="col">Review</th></tr></thead><tbody id="rows"></tbody></table></div>
+<section class="questions"><h2>Questions for the billing office</h2><ul id="questions"></ul></section>
+<details class="method"><summary>How to read this report</summary><p>Amounts are in USD. Line charges are divided by billing units before comparison. Positive differences are summed only for comparable rows; excluded rows are not treated as zero. Claim-specific reductions, coverage and patient responsibility are not calculated.</p><p>Uncertain OCR fields remain withheld. Descriptions come from the local CMS tables and written templates. No AI model is used.</p></details></div>
+</section></div>
+<footer>MedBill Decoder <span>Local prototype · Synthetic bills only · CMS Medicare reference data</span></footer>
+</main></body></html>

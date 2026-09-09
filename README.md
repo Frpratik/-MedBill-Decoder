@@ -1,6 +1,18 @@
 # MedBill Decoder
 
-Phases 1–4: a local CMS reference lookup, real Tesseract/OpenCV OCR and line-item parsing, statistical Medicare benchmark comparisons, and local explanations. The approved wording is **amount above Medicare benchmark**. API and UI remain for later phases. No third-party API or LLM integration is used or required.
+Phases 1–5: a local CMS reference lookup, real Tesseract/OpenCV OCR and line-item parsing, statistical Medicare benchmark comparisons, local explanations, and a FastAPI upload interface. The approved wording is **amount above Medicare benchmark**. No third-party API or LLM integration is used or required.
+
+## Open the local app
+
+With the setup below complete:
+
+```powershell
+.\.venv\Scripts\python.exe -m medbill.app
+```
+
+Open [MedBill Decoder](http://127.0.0.1:8000). Choose one of the three synthetic samples, or upload a synthetic PDF/image and confirm that it contains no real patient information. The page displays extracted rows, local explanations, matched benchmarks and questions for the billing office. Settings default to the sample's San Francisco reference area. The service date is read from each line; only July–September 2026 is supported.
+
+The server listens on loopback only. It accepts raw file bytes, capped at 20 MiB, without multipart temporary-file spooling. It processes one upload at a time, uses local assets and reference data, and does not save uploaded bills or reports. See `docs/PHASE_5_WEB_APP.md` for API details, actual test results, screenshots and limits.
 
 ## Setup
 
@@ -75,6 +87,6 @@ Seven code-specific paraphrases and a general CMS-description template explain k
 - `data/processed/reference.schema.sql`: actual database schema.
 - `data/processed/reference.examples.json`: actual lookup output from `medbill.verify`.
 
-Ingestion uses pandas; runtime lookups use Python's SQLite library. There are no LLM calls or invented reference amounts. Persisted artifacts comprise public references, explicitly synthetic bills and their test evidence. There is no upload endpoint or real patient-data processing in this phase.
+Ingestion uses pandas; runtime lookups use Python's SQLite library. There are no LLM calls or invented reference amounts. Persisted project artifacts comprise public references, explicitly synthetic bills and their test evidence. The upload endpoint is restricted to synthetic sample use and does not persist its input or output.
 
 CMS archives include AMA/ADA copyright notices. The pipeline retains the notices and provenance. Public availability does not establish unrestricted redistribution rights; raw and generated data are ignored by Git. Distribution terms must be addressed before submission packaging.
