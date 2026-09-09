@@ -1,0 +1,76 @@
+{
+  "context": {
+    "carrier": "01112",
+    "locality": "05",
+    "setting": "nonfacility",
+    "category": "nonQP"
+  },
+  "items": [
+    {
+      "code": "99213",
+      "modifier": "",
+      "service_date": "2025-01-15",
+      "description": "Office visit",
+      "quantity": "1",
+      "charged_cents": 25000,
+      "page": 1,
+      "line_index": 7,
+      "flag": null,
+      "amount_above_benchmark_usd": null,
+      "reference": {
+        "code": "99213",
+        "modifier": "",
+        "carrier": "01112",
+        "locality": "05",
+        "setting": "nonfacility",
+        "category": "nonQP",
+        "service_date": "2025-01-15",
+        "benchmark_usd": null,
+        "description": null,
+        "warnings": [],
+        "availability": "unsupported_date",
+        "supported_interval": [
+          "2026-07-01",
+          "2026-09-30"
+        ]
+      },
+      "availability": "unsupported_date",
+      "explanation_result": {
+        "method": "review_required",
+        "explanation": "The code or service date is outside the supported reference period.",
+        "question": "Can you confirm the service date and the code used on that date?"
+      }
+    }
+  ],
+  "summary": {
+    "candidate_rows": 1,
+    "compared_rows": 0,
+    "excluded_rows": 1,
+    "flagged_rows": 0,
+    "excluded_reasons": {
+      "unsupported_date": 1
+    },
+    "amount_above_medicare_benchmark_usd": null,
+    "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.",
+    "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."
+  },
+  "explanation_summary": {
+    "total_rows": 1,
+    "counts": {
+      "review_required": 1
+    },
+    "percent_of_all_rows": {
+      "template": 0.0,
+      "review_required": 100.0,
+      "unknown_code": 0.0
+    }
+  },
+  "ocr": {
+    "engine": "Tesseract",
+    "page_count": 1,
+    "candidate_rows": 1
+  },
+  "outcome": "no_comparable_rows",
+  "guidance": "No reliable price comparison is available. Review the reading and reference details below; no amount has been estimated.",
+  "notice": "Synthetic samples only. Processing is local. Uploads and reports are not saved by the app."
+}

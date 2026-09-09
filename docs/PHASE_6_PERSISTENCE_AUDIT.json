@@ -1,0 +1,153 @@
+{
+  "cases": {
+    "clean": {
+      "status": 200,
+      "outcome": "partial_comparison",
+      "cache_control": "no-store"
+    },
+    "skewed": {
+      "status": 200,
+      "outcome": "partial_comparison",
+      "cache_control": "no-store"
+    },
+    "degraded": {
+      "status": 200,
+      "outcome": "partial_comparison",
+      "cache_control": "no-store"
+    },
+    "blank": {
+      "status": 200,
+      "outcome": "no_service_rows",
+      "cache_control": "no-store"
+    },
+    "severely_blurred": {
+      "status": 200,
+      "outcome": "no_service_rows",
+      "cache_control": "no-store"
+    },
+    "unknown_code": {
+      "status": 200,
+      "outcome": "no_comparable_rows",
+      "cache_control": "no-store"
+    },
+    "unsupported_date": {
+      "status": 200,
+      "outcome": "no_comparable_rows",
+      "cache_control": "no-store"
+    },
+    "corrupt": {
+      "status": 422,
+      "outcome": null,
+      "cache_control": "no-store"
+    }
+  },
+  "file_mutations": [],
+  "pipe_write_opens": 7,
+  "network_connects": [],
+  "child_processes": [
+    {
+      "executable": "tesseract.exe",
+      "arguments": [
+        "stdin",
+        "stdout",
+        "-l",
+        "eng",
+        "--dpi",
+        "300",
+        "--psm",
+        "6",
+        "tsv"
+      ]
+    },
+    {
+      "executable": "tesseract.exe",
+      "arguments": [
+        "stdin",
+        "stdout",
+        "-l",
+        "eng",
+        "--dpi",
+        "300",
+        "--psm",
+        "6",
+        "tsv"
+      ]
+    },
+    {
+      "executable": "tesseract.exe",
+      "arguments": [
+        "stdin",
+        "stdout",
+        "-l",
+        "eng",
+        "--dpi",
+        "300",
+        "--psm",
+        "6",
+        "tsv"
+      ]
+    },
+    {
+      "executable": "tesseract.exe",
+      "arguments": [
+        "stdin",
+        "stdout",
+        "-l",
+        "eng",
+        "--dpi",
+        "300",
+        "--psm",
+        "6",
+        "tsv"
+      ]
+    },
+    {
+      "executable": "tesseract.exe",
+      "arguments": [
+        "stdin",
+        "stdout",
+        "-l",
+        "eng",
+        "--dpi",
+        "300",
+        "--psm",
+        "6",
+        "tsv"
+      ]
+    },
+    {
+      "executable": "tesseract.exe",
+      "arguments": [
+        "stdin",
+        "stdout",
+        "-l",
+        "eng",
+        "--dpi",
+        "300",
+        "--psm",
+        "6",
+        "tsv"
+      ]
+    },
+    {
+      "executable": "tesseract.exe",
+      "arguments": [
+        "stdin",
+        "stdout",
+        "-l",
+        "eng",
+        "--dpi",
+        "300",
+        "--psm",
+        "6",
+        "tsv"
+      ]
+    }
+  ],
+  "scratch_files_after_processing": [],
+  "reference_sha256_before": "2e5307e76def52d381adffb5d226af4606c608610229ab61aa77bb7106b19040",
+  "reference_sha256_after": "2e5307e76def52d381adffb5d226af4606c608610229ab61aa77bb7106b19040",
+  "reference_unchanged": true,
+  "scope": "Python audit events during in-process HTTP handling, child command arguments, scratch working/temp files, reference hash. Native child syscalls and OS paging are not traced.",
+  "passed": true
+}

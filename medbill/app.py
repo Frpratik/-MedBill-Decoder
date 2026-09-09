@@ -62,6 +62,21 @@ def decode(data, context):
     report = Explainer(synthetic=True).explain(Comparator(**context).compare(extraction))
     report['ocr'] = {'engine': extraction['engine'], 'page_count': len(extraction['pages']),
                      'candidate_rows': len(extraction['items'])}
+    summary = report['summary']
+    if not summary['candidate_rows']:
+        outcome = 'no_service_rows'
+        message = 'No service rows could be read. Use a clear, upright image of an itemized bill, with the code, units and charge visible.'
+    elif not summary['compared_rows']:
+        outcome = 'no_comparable_rows'
+        message = 'No reliable price comparison is available. Review the reading and reference details below; no amount has been estimated.'
+    elif summary['excluded_rows']:
+        outcome = 'partial_comparison'
+        message = f'Only {summary["compared_rows"]} of {summary["candidate_rows"]} rows could be compared. The remaining rows are excluded from the amount below.'
+    else:
+        outcome = 'complete_comparison'
+        message = 'All extracted rows have a usable benchmark. This does not confirm that every service on the original bill was recognized.'
+    report['outcome'] = outcome
+    report['guidance'] = message
     report['notice'] = 'Synthetic samples only. Processing is local. Uploads and reports are not saved by the app.'
     return report
 
@@ -83,6 +98,8 @@ async def decode_upload(request: Request, synthetic: Literal['true'],
     if length:
         try:
             size = int(length)
+            if size < 0:
+                raise ValueError('Negative length')
         except ValueError:
             raise HTTPException(400, 'Invalid upload length.')
         if size > MAX_BYTES:

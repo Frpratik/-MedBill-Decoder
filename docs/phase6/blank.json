@@ -1,0 +1,36 @@
+{
+  "context": {
+    "carrier": "01112",
+    "locality": "05",
+    "setting": "nonfacility",
+    "category": "nonQP"
+  },
+  "items": [],
+  "summary": {
+    "candidate_rows": 0,
+    "compared_rows": 0,
+    "excluded_rows": 0,
+    "flagged_rows": 0,
+    "excluded_reasons": {},
+    "amount_above_medicare_benchmark_usd": null,
+    "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.",
+    "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."
+  },
+  "explanation_summary": {
+    "total_rows": 0,
+    "counts": {},
+    "percent_of_all_rows": {
+      "template": 0,
+      "review_required": 0,
+      "unknown_code": 0
+    }
+  },
+  "ocr": {
+    "engine": "Tesseract",
+    "page_count": 1,
+    "candidate_rows": 0
+  },
+  "outcome": "no_service_rows",
+  "guidance": "No service rows could be read. Use a clear, upright image of an itemized bill, with the code, units and charge visible.",
+  "notice": "Synthetic samples only. Processing is local. Uploads and reports are not saved by the app."
+}

@@ -1,6 +1,6 @@
 # MedBill Decoder
 
-Phases 1–5: a local CMS reference lookup, real Tesseract/OpenCV OCR and line-item parsing, statistical Medicare benchmark comparisons, local explanations, and a FastAPI upload interface. The approved wording is **amount above Medicare benchmark**. No third-party API or LLM integration is used or required.
+Phases 1–6: a local CMS reference lookup, real Tesseract/OpenCV OCR and line-item parsing, statistical Medicare benchmark comparisons, local explanations, and a FastAPI upload interface with tested edge-case handling. The approved wording is **amount above Medicare benchmark**. No third-party API or LLM integration is used or required.
 
 ## Open the local app
 
@@ -13,6 +13,8 @@ With the setup below complete:
 Open [MedBill Decoder](http://127.0.0.1:8000). Choose one of the three synthetic samples, or upload a synthetic PDF/image and confirm that it contains no real patient information. The page displays extracted rows, local explanations, matched benchmarks and questions for the billing office. Settings default to the sample's San Francisco reference area. The service date is read from each line; only July–September 2026 is supported.
 
 The server listens on loopback only. It accepts raw file bytes, capped at 20 MiB, without multipart temporary-file spooling. It processes one upload at a time, uses local assets and reference data, and does not save uploaded bills or reports. See `docs/PHASE_5_WEB_APP.md` for API details, actual test results, screenshots and limits.
+
+Blank/unreadable images and unpriced codes show **Not calculated**, not a zero-dollar estimate. Partial results identify how many rows were excluded. Changing comparison settings clears the old report. Phase 6 adds real blurred/blank/unknown-code/date regression fixtures and an observational persistence audit; its findings and limits are in `docs/PHASE_6_DEMO_POLISH.md`.
 
 ## Setup
 

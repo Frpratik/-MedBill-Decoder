@@ -1,0 +1,62 @@
+{
+  "blank": {
+    "http": 200,
+    "outcome": "no_service_rows",
+    "summary": {
+      "candidate_rows": 0,
+      "compared_rows": 0,
+      "excluded_rows": 0,
+      "flagged_rows": 0,
+      "excluded_reasons": {},
+      "amount_above_medicare_benchmark_usd": null,
+      "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.",
+      "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."
+    }
+  },
+  "severely_blurred": {
+    "http": 200,
+    "outcome": "no_service_rows",
+    "summary": {
+      "candidate_rows": 0,
+      "compared_rows": 0,
+      "excluded_rows": 0,
+      "flagged_rows": 0,
+      "excluded_reasons": {},
+      "amount_above_medicare_benchmark_usd": null,
+      "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.",
+      "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."
+    }
+  },
+  "unknown_code": {
+    "http": 200,
+    "outcome": "no_comparable_rows",
+    "summary": {
+      "candidate_rows": 1,
+      "compared_rows": 0,
+      "excluded_rows": 1,
+      "flagged_rows": 0,
+      "excluded_reasons": {
+        "unknown_code": 1
+      },
+      "amount_above_medicare_benchmark_usd": null,
+      "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.",
+      "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."
+    }
+  },
+  "unsupported_date": {
+    "http": 200,
+    "outcome": "no_comparable_rows",
+    "summary": {
+      "candidate_rows": 1,
+      "compared_rows": 0,
+      "excluded_rows": 1,
+      "flagged_rows": 0,
+      "excluded_reasons": {
+        "unsupported_date": 1
+      },
+      "amount_above_medicare_benchmark_usd": null,
+      "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.",
+      "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."
+    }
+  }
+}

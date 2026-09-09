@@ -1,0 +1,74 @@
+{
+  "context": {
+    "carrier": "01112",
+    "locality": "05",
+    "setting": "nonfacility",
+    "category": "nonQP"
+  },
+  "items": [
+    {
+      "code": "99999",
+      "modifier": "",
+      "service_date": "2026-07-15",
+      "description": "Unverified sample service",
+      "quantity": "1",
+      "charged_cents": 7500,
+      "page": 1,
+      "line_index": 7,
+      "flag": null,
+      "amount_above_benchmark_usd": null,
+      "reference": {
+        "code": "99999",
+        "modifier": "",
+        "carrier": "01112",
+        "locality": "05",
+        "setting": "nonfacility",
+        "category": "nonQP",
+        "service_date": "2026-07-15",
+        "benchmark_usd": null,
+        "description": null,
+        "warnings": [],
+        "availability": "unknown_code"
+      },
+      "availability": "unknown_code",
+      "explanation_result": {
+        "method": "unknown_code",
+        "reason": "no_local_description",
+        "explanation": "No local code description is available. The service remains unverified.",
+        "question": "Can you confirm the code and describe the service in plain language?",
+        "benchmark_explanation": "No usable price comparison is available for this line; no difference is estimated."
+      }
+    }
+  ],
+  "summary": {
+    "candidate_rows": 1,
+    "compared_rows": 0,
+    "excluded_rows": 1,
+    "flagged_rows": 0,
+    "excluded_reasons": {
+      "unknown_code": 1
+    },
+    "amount_above_medicare_benchmark_usd": null,
+    "scope": "Sum of positive differences for compared rows only; excluded rows contribute neither zero nor an estimate.",
+    "meaning": "Not a confirmed overcharge, patient responsibility, or recoverable savings."
+  },
+  "explanation_summary": {
+    "total_rows": 1,
+    "counts": {
+      "unknown_code": 1
+    },
+    "percent_of_all_rows": {
+      "template": 0.0,
+      "review_required": 0.0,
+      "unknown_code": 100.0
+    }
+  },
+  "ocr": {
+    "engine": "Tesseract",
+    "page_count": 1,
+    "candidate_rows": 1
+  },
+  "outcome": "no_comparable_rows",
+  "guidance": "No reliable price comparison is available. Review the reading and reference details below; no amount has been estimated.",
+  "notice": "Synthetic samples only. Processing is local. Uploads and reports are not saved by the app."
+}

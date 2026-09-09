@@ -1,0 +1,75 @@
+C:\Users\prati\OneDrive\Desktop\MediBill\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_all_three_real_uploads_match_prior_comparison (test_app.AppTests.test_all_three_real_uploads_match_prior_comparison) ... ok
+test_attestation_and_context_required (test_app.AppTests.test_attestation_and_context_required) ... ok
+test_cross_origin_rejected (test_app.AppTests.test_cross_origin_rejected) ... ok
+test_localities_are_real_unique_pairs (test_app.AppTests.test_localities_are_real_unique_pairs) ... ok
+test_page_and_local_assets (test_app.AppTests.test_page_and_local_assets) ... ok
+test_samples_whitelisted (test_app.AppTests.test_samples_whitelisted) ... ok
+test_upload_failures (test_app.AppTests.test_upload_failures) ... ok
+test_absent_rates_remain_unknown (test_compare.ComparisonTests.test_absent_rates_remain_unknown) ... ok
+test_below_benchmark_is_zero_excess (test_compare.ComparisonTests.test_below_benchmark_is_zero_excess) ... ok
+test_bill_summaries_exclude_unpriced_and_uncertain_rows (test_compare.ComparisonTests.test_bill_summaries_exclude_unpriced_and_uncertain_rows) ... ok
+test_cohort_one_observation_per_locality_and_exact_dimensions (test_compare.ComparisonTests.test_cohort_one_observation_per_locality_and_exact_dimensions) ... ok
+test_invalid_numeric_input_rejected (test_compare.ComparisonTests.test_invalid_numeric_input_rejected) ... ok
+test_known_local_difference (test_compare.ComparisonTests.test_known_local_difference) ... ok
+test_locality_rate_itself_is_not_flagged (test_compare.ComparisonTests.test_locality_rate_itself_is_not_flagged) ... ok
+test_no_comparable_rows_does_not_imply_zero (test_compare.ComparisonTests.test_no_comparable_rows_does_not_imply_zero) ... ok
+test_quantity_normalizes_charge (test_compare.ComparisonTests.test_quantity_normalizes_charge) ... ok
+test_review_rows_never_repaired_from_raw_values (test_compare.ComparisonTests.test_review_rows_never_repaired_from_raw_values) ... ok
+test_unsupported_date_excluded (test_compare.ComparisonTests.test_unsupported_date_excluded) ... ok
+test_nearest_rank_boundary (test_compare.DistributionTests.test_nearest_rank_boundary) ... ok
+test_small_cohort_has_no_flag (test_compare.DistributionTests.test_small_cohort_has_no_flag) ... ok
+test_tied_midrank (test_compare.DistributionTests.test_tied_midrank) ... ok
+test_uniform_rates_have_no_statistical_flag (test_compare.DistributionTests.test_uniform_rates_have_no_statistical_flag) ... ok
+test_busy_job_rejected_before_body_read (test_edge_cases.EdgeCases.test_busy_job_rejected_before_body_read) ... ok
+test_corrupt_upload_then_good_upload_releases_gate (test_edge_cases.EdgeCases.test_corrupt_upload_then_good_upload_releases_gate) ... ok
+test_real_edge_cases_do_not_invent_comparisons (test_edge_cases.EdgeCases.test_real_edge_cases_do_not_invent_comparisons) ... ok
+test_streamed_limit_without_content_length (test_edge_cases.EdgeCases.test_streamed_limit_without_content_length) ... ok
+test_all_sample_coverage (test_explain.ExplanationTests.test_all_sample_coverage) ... ok
+test_empty_report (test_explain.ExplanationTests.test_empty_report) ... ok
+test_known_unpriced_code_still_explained (test_explain.ExplanationTests.test_known_unpriced_code_still_explained) ... ok
+test_preserves_comparison_and_input (test_explain.ExplanationTests.test_preserves_comparison_and_input) ... ok
+test_requires_synthetic (test_explain.ExplanationTests.test_requires_synthetic) ... ok
+test_review_does_not_recover_code (test_explain.ExplanationTests.test_review_does_not_recover_code) ... ok
+test_unknown_does_not_guess_from_untrusted_wording (test_explain.ExplanationTests.test_unknown_does_not_guess_from_untrusted_wording) ... ok
+test_unsupported_date_is_review (test_explain.ExplanationTests.test_unsupported_date_is_review) ... ok
+test_empty_and_invalid_inputs_rejected (test_ocr.ImageTests.test_empty_and_invalid_inputs_rejected) ... ok
+test_preprocess_blank_has_no_rotation (test_ocr.ImageTests.test_preprocess_blank_has_no_rotation) ... ok
+test_credit_never_becomes_positive_charge (test_ocr.ParserTests.test_credit_never_becomes_positive_charge) ... ok
+test_exact_amount_and_quantity (test_ocr.ParserTests.test_exact_amount_and_quantity) ... ok
+test_headerless_layout_requires_review (test_ocr.ParserTests.test_headerless_layout_requires_review) ... ok
+test_invalid_date_flagged (test_ocr.ParserTests.test_invalid_date_flagged) ... ok
+test_malformed_money_not_repaired (test_ocr.ParserTests.test_malformed_money_not_repaired) ... ok
+test_missing_code_keeps_row (test_ocr.ParserTests.test_missing_code_keeps_row) ... ok
+test_modifier_preserved (test_ocr.ParserTests.test_modifier_preserved) ... ok
+test_multiple_prices_without_headers_withheld (test_ocr.ParserTests.test_multiple_prices_without_headers_withheld) ... ok
+test_quantity_never_defaults_to_one (test_ocr.ParserTests.test_quantity_never_defaults_to_one) ... ok
+test_total_not_parsed_as_service (test_ocr.ParserTests.test_total_not_parsed_as_service) ... ok
+test_clean_four_rows_exact (test_ocr.RealOCRTests.test_clean_four_rows_exact) ... ok
+test_damaged_fields_not_invented (test_ocr.RealOCRTests.test_damaged_fields_not_invented) ... ok
+test_extract_writes_no_files_in_working_directory (test_ocr.RealOCRTests.test_extract_writes_no_files_in_working_directory) ... ok
+test_raw_misrecognition_is_retained (test_ocr.RealOCRTests.test_raw_misrecognition_is_retained) ... ok
+test_skew_and_unit_price_column (test_ocr.RealOCRTests.test_skew_and_unit_price_column) ... ok
+test_summary_lines_excluded (test_ocr.RealOCRTests.test_summary_lines_excluded) ... ok
+test_duplicate_source_keys_fail (test_reference.ParsingTests.test_duplicate_source_keys_fail) ... ok
+test_invalid_money_is_not_imputed (test_reference.ParsingTests.test_invalid_money_is_not_imputed) ... ok
+test_money_preserves_cents (test_reference.ParsingTests.test_money_preserves_cents) ... ok
+test_conflicting_cms_status_is_withheld (test_reference.SourceIntegrationTests.test_conflicting_cms_status_is_withheld) ... ok
+test_dates_never_silently_fallback (test_reference.SourceIntegrationTests.test_dates_never_silently_fallback) ... ok
+test_every_last_revision_matches_current_row (test_reference.SourceIntegrationTests.test_every_last_revision_matches_current_row) ... ok
+test_hcpcs_corrections_already_in_main_workbook (test_reference.SourceIntegrationTests.test_hcpcs_corrections_already_in_main_workbook) ... ok
+test_invalid_context_rejected (test_reference.SourceIntegrationTests.test_invalid_context_rejected) ... ok
+test_missing_locality_and_modifier_never_fallback (test_reference.SourceIntegrationTests.test_missing_locality_and_modifier_never_fallback) ... ok
+test_na_setting_does_not_use_positive_source_amount (test_reference.SourceIntegrationTests.test_na_setting_does_not_use_positive_source_amount) ... ok
+test_qp_is_not_nonqp (test_reference.SourceIntegrationTests.test_qp_is_not_nonqp) ... ok
+test_runtime_database_is_read_only (test_reference.SourceIntegrationTests.test_runtime_database_is_read_only) ... ok
+test_setting_changes_reference (test_reference.SourceIntegrationTests.test_setting_changes_reference) ... ok
+test_terminated_hcpcs_not_used (test_reference.SourceIntegrationTests.test_terminated_hcpcs_not_used) ... ok
+test_unknown_code_never_gets_price (test_reference.SourceIntegrationTests.test_unknown_code_never_gets_price) ... ok
+test_verified_raw_office_visit (test_reference.SourceIntegrationTests.test_verified_raw_office_visit) ... ok
+
+----------------------------------------------------------------------
+Ran 68 tests in 30.421s
+
+OK
